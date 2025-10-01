@@ -4,6 +4,7 @@ import path from "path";
 
 // Vite config specifically for Vercel deployment (client-only)
 export default defineConfig({
+  base: "/",
   build: {
     outDir: "dist/spa",
   },
