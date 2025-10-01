@@ -146,24 +146,15 @@ export default function Index() {
               </div>
             </div>
             <div>
-              <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm">
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-lg border border-border/60 bg-background/80 p-4">
-                    <p className="text-xs text-foreground/60">Time saved</p>
-                    <p className="mt-1 text-2xl font-bold">35%</p>
+              <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-8 shadow-sm">
+                <div className="text-center">
+                  <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                    <span className="text-2xl">🎯</span>
                   </div>
-                  <div className="rounded-lg border border-border/60 bg-background/80 p-4">
-                    <p className="text-xs text-foreground/60">Quality uplift</p>
-                    <p className="mt-1 text-2xl font-bold">+18%</p>
-                  </div>
-                  <div className="rounded-lg border border-border/60 bg-background/80 p-4">
-                    <p className="text-xs text-foreground/60">Cycle speed</p>
-                    <p className="mt-1 text-2xl font-bold">2.4×</p>
-                  </div>
-                  <div className="rounded-lg border border-border/60 bg-background/80 p-4">
-                    <p className="text-xs text-foreground/60">Model safety</p>
-                    <p className="mt-1 text-2xl font-bold">↑</p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-3">Focused on Results</h3>
+                  <p className="text-foreground/70">
+                    We measure success by your business outcomes, not just technical metrics. Every solution is designed to deliver measurable value to your organization.
+                  </p>
                 </div>
               </div>
             </div>

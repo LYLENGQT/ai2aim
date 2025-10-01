@@ -230,27 +230,27 @@ export default function Contact() {
             <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">📍</span>
+                  <i className="fas fa-map-marker-alt text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Get In Touch</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="text-primary mt-1">🏢</span>
+                  <i className="fas fa-building text-primary mt-1"></i>
                   <div>
                     <p className="font-medium text-foreground">Headquarters</p>
                     <p className="text-sm text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2, Canada</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-accent mt-1">📧</span>
+                  <i className="fas fa-envelope text-accent mt-1"></i>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <p className="text-sm text-foreground/70">contact@ai2aim.ai</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-primary mt-1">🕒</span>
+                  <i className="fas fa-clock text-primary mt-1"></i>
                   <div>
                     <p className="font-medium text-foreground">Business Hours</p>
                     <p className="text-sm text-foreground/70">Mon–Fri, 9am–6pm (MST)</p>
@@ -263,13 +263,13 @@ export default function Contact() {
             <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">🌍</span>
+                  <i className="fas fa-globe text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Global Presence</h3>
               </div>
               <div className="space-y-4">
                 <div className="text-center p-6 rounded-lg bg-background/50">
-                  <div className="text-3xl mb-3">🇨🇦</div>
+                  <i className="fas fa-map-marker-alt text-3xl mb-3 text-primary"></i>
                   <p className="font-medium text-lg">Edmonton, Alberta</p>
                   <p className="text-sm text-foreground/70">Headquarters & Operations</p>
                 </div>
@@ -285,7 +285,7 @@ export default function Contact() {
             <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">⭐</span>
+                  <i className="fas fa-star text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Why Choose Us</h3>
               </div>
@@ -297,38 +297,10 @@ export default function Contact() {
                   "Dedicated support team"
                 ].map((item, index) => (
                   <div key={item} className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    <i className="fas fa-check-circle text-primary text-sm"></i>
                     <span className="text-sm text-foreground/80">{item}</span>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '500ms'}}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">📊</span>
-                </div>
-                <h3 className="text-xl font-bold">Quick Stats</h3>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-3 rounded-lg bg-primary/10">
-                  <div className="text-2xl font-bold text-primary">90%</div>
-                  <div className="text-xs text-foreground/70">Success Rate</div>
-                </div>
-                <div className="text-center p-3 rounded-lg bg-accent/10">
-                  <div className="text-2xl font-bold text-accent">24/7</div>
-                  <div className="text-xs text-foreground/70">Support</div>
-                </div>
-                <div className="text-center p-3 rounded-lg bg-primary/10">
-                  <div className="text-2xl font-bold text-primary">90</div>
-                  <div className="text-xs text-foreground/70">Days Delivery</div>
-                </div>
-                <div className="text-center p-3 rounded-lg bg-accent/10">
-                  <div className="text-2xl font-bold text-accent">100%</div>
-                  <div className="text-xs text-foreground/70">Satisfaction</div>
-                </div>
               </div>
             </div>
           </div>
