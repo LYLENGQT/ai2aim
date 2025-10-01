@@ -70,37 +70,37 @@ export default function Index() {
               {
                 title: "AI-Powered Platforms",
                 description: "Intelligent systems that learn and adapt to your business needs",
-                icon: "🤖",
+                icon: "fas fa-robot",
                 color: "from-primary/10 to-primary/5"
               },
               {
                 title: "Business Automation",
                 description: "Streamline operations with smart workflow automation",
-                icon: "⚡",
+                icon: "fas fa-bolt",
                 color: "from-accent/10 to-accent/5"
               },
               {
                 title: "SaaS Solutions",
                 description: "Scalable cloud-based applications for modern enterprises",
-                icon: "☁️",
+                icon: "fas fa-cloud",
                 color: "from-primary/10 to-accent/5"
               },
               {
                 title: "Digital Transformation",
                 description: "Complete digital overhaul with measurable business outcomes",
-                icon: "🚀",
+                icon: "fas fa-rocket",
                 color: "from-accent/10 to-primary/5"
               },
               {
                 title: "Data Analytics",
                 description: "Turn data into actionable insights with advanced analytics",
-                icon: "📊",
+                icon: "fas fa-chart-bar",
                 color: "from-primary/10 to-primary/5"
               },
               {
                 title: "Enterprise Software",
                 description: "Custom solutions built for your specific requirements",
-                icon: "🏢",
+                icon: "fas fa-building",
                 color: "from-accent/10 to-accent/5"
               }
             ].map((solution, index) => (
@@ -112,7 +112,7 @@ export default function Index() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl group-hover:scale-110 transition-transform duration-300">{solution.icon}</span>
+                    <i className={`${solution.icon} text-3xl text-primary group-hover:scale-110 transition-transform duration-300`}></i>
                     <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {solution.title}
                     </h3>
@@ -149,7 +149,7 @@ export default function Index() {
               <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-8 shadow-sm">
                 <div className="text-center">
                   <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-2xl">🎯</span>
+                    <i className="fas fa-bullseye text-2xl text-primary"></i>
                   </div>
                   <h3 className="text-xl font-bold mb-3">Focused on Results</h3>
                   <p className="text-foreground/70">
