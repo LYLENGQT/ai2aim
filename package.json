@@ -19,7 +19,7 @@
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
-    "vercel-build": "npm run build:client"
+    "vercel-build": "pnpm run build:client"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
