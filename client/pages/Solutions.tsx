@@ -71,7 +71,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '100ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">🤖</span>
+                  <i className="fas fa-robot text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">AI & Automation</h3>
               </div>
@@ -89,7 +89,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '200ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">☁️</span>
+                  <i className="fas fa-cloud text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">SaaS & Cloud</h3>
               </div>
@@ -107,7 +107,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '300ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">🏢</span>
+                  <i className="fas fa-building text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Business Solutions</h3>
               </div>
@@ -125,7 +125,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '400ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">🎓</span>
+                  <i className="fas fa-graduation-cap text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Education & Training</h3>
               </div>
@@ -143,7 +143,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '500ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">🧠</span>
+                  <i className="fas fa-brain text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Learning Systems</h3>
               </div>
@@ -161,7 +161,7 @@ export default function Solutions() {
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '600ms'}}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">🏗️</span>
+                  <i className="fas fa-tools text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Enterprise Solutions</h3>
               </div>

@@ -48,7 +48,7 @@ export default function About() {
             <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-lg">🏢</span>
+                  <i className="fas fa-building text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Key Information</h3>
               </div>
@@ -75,7 +75,7 @@ export default function About() {
             <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <span className="text-white text-lg">🎯</span>
+                  <i className="fas fa-bullseye text-white text-lg"></i>
                 </div>
                 <h3 className="text-xl font-bold">Our Focus</h3>
               </div>
@@ -177,7 +177,7 @@ export default function About() {
           <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center group">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">🎯</span>
+                <i className="fas fa-bullseye text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-2">Strategy First</h3>
               <p className="text-foreground/70">We start with understanding your business goals and challenges before proposing solutions.</p>
@@ -185,7 +185,7 @@ export default function About() {
             
             <div className="text-center group">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">⚡</span>
+                <i className="fas fa-bolt text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-2">Rapid Execution</h3>
               <p className="text-foreground/70">From strategy to implementation, we deliver results quickly with measurable outcomes.</p>
@@ -193,7 +193,7 @@ export default function About() {
             
             <div className="text-center group">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">🚀</span>
+                <i className="fas fa-rocket text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-2">Scalable Growth</h3>
               <p className="text-foreground/70">Our solutions grow with your business, ensuring long-term success and adaptability.</p>
