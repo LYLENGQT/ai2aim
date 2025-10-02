@@ -68,7 +68,7 @@ export default function Solutions() {
 
           <div className="grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {/* AI & Automation Solutions */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '100ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="100">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                   <i className="fas fa-robot text-white text-lg"></i>
@@ -86,7 +86,7 @@ export default function Solutions() {
             </div>
 
             {/* SaaS & Cloud Solutions */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '200ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="200">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
                   <i className="fas fa-cloud text-white text-lg"></i>
@@ -104,7 +104,7 @@ export default function Solutions() {
             </div>
 
             {/* Business Solutions */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '300ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                   <i className="fas fa-building text-white text-lg"></i>
@@ -122,7 +122,7 @@ export default function Solutions() {
             </div>
 
             {/* Education & Training */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '400ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="400">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
                   <i className="fas fa-graduation-cap text-white text-lg"></i>
@@ -140,7 +140,7 @@ export default function Solutions() {
             </div>
 
             {/* Learning Systems */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '500ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="500">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                   <i className="fas fa-brain text-white text-lg"></i>
@@ -158,7 +158,7 @@ export default function Solutions() {
             </div>
 
             {/* Enterprise Solutions */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02] animate-fade-in-up" style={{animationDelay: '600ms'}}>
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="600">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
                   <i className="fas fa-tools text-white text-lg"></i>
@@ -176,9 +176,9 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="700">
             <Link to="/contact">
-              <Button className="h-12 px-8 text-base hover:scale-105 transition-all duration-300 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '700ms'}}>
+              <Button className="h-12 px-8 text-base hover:scale-105 transition-all duration-300 hover:shadow-lg">
                 Start Your Project
                 <span className="ml-2">→</span>
               </Button>
@@ -191,7 +191,7 @@ export default function Solutions() {
         <div className="container py-16">
           <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
             {["Discover","Design","Deliver"].map((step, i) => (
-              <div key={step} className="relative rounded-xl border border-border/60 bg-background p-6 shadow-sm">
+              <div key={step} className="relative rounded-xl border border-border/60 bg-background p-6 shadow-sm" data-aos="fade-up" data-aos-delay={i * 200}>
                 <div className="absolute -top-3 left-6 flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold shadow">{i+1}</div>
                 <h3 className="text-lg font-semibold">{step}</h3>
                 <p className="mt-2 text-sm text-foreground/70">{step === "Discover" ? "Assess opportunities, risks, and ROI; align with KPIs." : step === "Design" ? "Prototype, evaluate, and set guardrails with stakeholders." : "Ship, observe, iterate—every cycle improves outcomes."}</p>
