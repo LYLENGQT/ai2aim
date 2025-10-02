@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SiteLayout from "../components/SiteLayout";
 import { Button } from "../components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
+import DemoModal from "../components/DemoModal";
 
 export default function Index() {
   return (
@@ -10,8 +11,8 @@ export default function Index() {
         <div className="pointer-events-none absolute inset-0 -z-10 opacity-60">
           <div className="absolute -top-40 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-to-br from-primary/25 via-accent/25 to-transparent blur-3xl animate-pulse" />
         </div>
-        <div className="container section-padding-lg">
-          <div className="mx-auto max-w-3xl text-center content-spacing">
+        <div className="container py-12 md:py-16">
+          <div className="mx-auto max-w-3xl text-center space-y-6">
             <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs text-foreground/70 shadow-sm animate-fade-in-up">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               AI Engineering & Automation
@@ -25,12 +26,12 @@ export default function Index() {
             Ai2Aim is a dedicated team building and scaling practical and secure AI solutions, including LLM applications, automation, data platforms, and MLOps, to streamline operations and solve complex business challenges for measurable results.
             </p>
             <div className="flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-in-up animation-delay-600">
-              <Link to="/contact">
+              <DemoModal>
                 <Button className="h-12 px-6 text-base shadow-[0_0_35px_-10px_hsl(var(--primary))] hover:shadow-[0_0_50px_-10px_hsl(var(--primary))] transition-all duration-300 hover:scale-105">
                   Book a demo
                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
-              </Link>
+              </DemoModal>
               <a href="#solutions" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
                 See solutions
               </a>
@@ -57,15 +58,15 @@ export default function Index() {
       </section>
 
       <section id="solutions" className="border-t border-border/60 bg-muted/20">
-        <div className="container section-padding">
-          <div className="mx-auto max-w-3xl text-center content-spacing">
+        <div className="container py-12 md:py-16">
+          <div className="mx-auto max-w-3xl text-center space-y-4">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Solutions</h2>
             <p className="text-foreground/70">
               Modular capabilities. Enterprise-grade delivery. Start focused, scale with confidence.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "AI-Powered Platforms",
@@ -129,9 +130,9 @@ export default function Index() {
       </section>
 
       <section className="relative">
-        <div className="container section-padding">
-          <div className="grid items-center gap-12 md:grid-cols-2">
-            <div className="content-spacing">
+        <div className="container py-12 md:py-16">
+          <div className="grid items-center gap-8 md:grid-cols-2">
+            <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Built for outcomes, not hype</h2>
               <p className="text-foreground/70">
                 We focus on shipping systems that make work faster, smarter, and safer—measured by your KPIs. From discovery to production, we align AI with your operating reality.
@@ -165,16 +166,16 @@ export default function Index() {
 
 
       <section className="border-t border-border/60 bg-muted/20">
-        <div className="container section-padding">
-          <div className="grid items-center gap-8 rounded-2xl border border-border/60 bg-background p-8 shadow-sm md:grid-cols-2">
-            <div className="content-spacing">
+        <div className="container py-12 md:py-16">
+          <div className="grid items-center gap-6 rounded-2xl border border-border/60 bg-background p-6 shadow-sm md:grid-cols-2">
+            <div className="space-y-3">
               <h3 className="text-2xl font-bold tracking-tight">Ready to aim AI at your goals?</h3>
               <p className="text-foreground/70">Share your objectives and constraints—we will propose a practical path that respects your reality.</p>
             </div>
             <div className="md:text-right">
-              <Link to="/contact">
+              <DemoModal>
                 <Button className="h-11 px-6">Start a project</Button>
-              </Link>
+              </DemoModal>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
+import DemoModal from "./DemoModal";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -39,11 +40,11 @@ export default function SiteHeader() {
 
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
-          <Link to="/contact">
+          <DemoModal>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_-10px_hsl(var(--primary))]">
               Schedule a demo
             </Button>
-          </Link>
+          </DemoModal>
         </div>
 
         <button
@@ -115,9 +116,9 @@ export default function SiteHeader() {
             }`} style={{transitionDelay: open ? '350ms' : '0ms'}}>
               <div className="flex items-center justify-center gap-4">
                 <ThemeToggle />
-                <Link to="/contact" onClick={() => setOpen(false)}>
-                  <Button size="sm" className="px-4">Schedule a demo</Button>
-                </Link>
+                <DemoModal>
+                  <Button size="sm" className="px-4" onClick={() => setOpen(false)}>Schedule a demo</Button>
+                </DemoModal>
               </div>
             </div>
           </div>
