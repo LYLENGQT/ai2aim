@@ -144,44 +144,44 @@ export default function Contact() {
             </Button>
           </form>
 
-          <div className="space-y-4 w-full max-w-md">
+          <div className="space-y-5 w-full max-w-lg">
             {/* Contact Information */}
-            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-4 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-map-marker-alt text-white text-xs"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-5 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-map-marker-alt text-white text-sm"></i>
                 </div>
-                <h3 className="text-sm font-bold">Contact Info</h3>
+                <h3 className="text-base font-bold">Contact Info</h3>
               </div>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <i className="fas fa-envelope text-accent text-xs"></i>
-                  <p className="text-xs text-foreground/70">contact@ai2aim.ai</p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <i className="fas fa-envelope text-accent text-sm"></i>
+                  <p className="text-sm text-foreground/70">contact@ai2aim.ai</p>
                 </div>
-                <div className="flex items-start gap-2">
-                  <i className="fas fa-map-marker-alt text-primary text-xs"></i>
-                  <p className="text-xs text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2</p>
+                <div className="flex items-start gap-3">
+                  <i className="fas fa-map-marker-alt text-primary text-sm"></i>
+                  <p className="text-sm text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2</p>
                 </div>
               </div>
             </div>
 
             {/* Why Choose Us */}
-            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-star text-white text-xs"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-5 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-star text-white text-sm"></i>
                 </div>
-                <h3 className="text-sm font-bold">Why Choose Us</h3>
+                <h3 className="text-base font-bold">Why Choose Us</h3>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {[
                   "90-day delivery cycles",
                   "Enterprise-grade security",
                   "Custom AI solutions"
                 ].map((item, index) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <i className="fas fa-check-circle text-primary text-xs"></i>
-                    <span className="text-xs text-foreground/80">{item}</span>
+                  <div key={item} className="flex items-center gap-3">
+                    <i className="fas fa-check-circle text-primary text-sm"></i>
+                    <span className="text-sm text-foreground/80">{item}</span>
                   </div>
                 ))}
               </div>
