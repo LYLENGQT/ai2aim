@@ -47,12 +47,12 @@ export default function FloatingChat() {
         </div>
 
         {/* Tooltip */}
-        <div className="absolute bottom-16 right-0 bg-blue-600 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
+        <div className="absolute bottom-16 right-0 bg-primary text-primary-foreground text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             AimBot is online
           </div>
-          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-blue-600" />
+          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-primary" />
         </div>
       </div>
 
