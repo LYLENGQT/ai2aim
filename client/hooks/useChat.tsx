@@ -16,37 +16,34 @@ export default function useChat() {
     }
   }, []);
 
-  // Hide default Chatbase widget
+  // Hide default Chatbase widget button but keep the widget itself
   useEffect(() => {
     const hideDefaultWidget = () => {
-      const selectors = [
-        '[data-chatbase-widget]',
+      // Only hide the button, not the widget itself
+      const buttonSelectors = [
         '.chatbase-widget-button',
-        'div[style*="position: fixed"][style*="bottom"]',
-        'iframe[src*="chatbase"]',
-        'div[class*="chatbase"]',
-        'div[id*="chatbase"]'
+        'div[style*="position: fixed"][style*="bottom"][style*="right"]:not(.floating-chat-custom)'
       ];
       
-      selectors.forEach(selector => {
+      buttonSelectors.forEach(selector => {
         const elements = document.querySelectorAll(selector);
         elements.forEach(el => {
           if (!el.classList.contains('floating-chat-custom')) {
             el.style.display = 'none';
-            el.style.visibility = 'hidden';
-            el.style.opacity = '0';
-            el.style.pointerEvents = 'none';
           }
         });
       });
     };
 
-    // Run immediately and then every 500ms for the first 5 seconds
-    hideDefaultWidget();
-    const interval = setInterval(hideDefaultWidget, 500);
-    setTimeout(() => clearInterval(interval), 5000);
+    // Run after a delay to let Chatbase initialize
+    const timer = setTimeout(hideDefaultWidget, 2000);
+    const interval = setInterval(hideDefaultWidget, 1000);
+    setTimeout(() => clearInterval(interval), 10000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   const openChat = () => {
