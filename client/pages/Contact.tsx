@@ -160,7 +160,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-start gap-2">
                   <i className="fas fa-map-marker-alt text-primary text-xs"></i>
-                  <p className="text-xs text-foreground/70">Edmonton, Alberta</p>
+                  <p className="text-xs text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2</p>
                 </div>
               </div>
             </div>
