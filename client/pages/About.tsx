@@ -12,7 +12,7 @@ export default function About() {
             About <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-gradient">AI2Aim</span>
           </h1>
           <p className="mx-auto mt-6 max-w-4xl text-sm sm:text-base text-foreground/70 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200">
-            Ai2Aim Inc. is an emerging technology startup focused on harnessing the power of artificial intelligence to solve complex organizational challenges. Founded with the mission to enhance knowledge management and collaboration in modern enterprises, Ai2Aim is developing its flagship platforms designed to streamline operations and solve intricate business problems.
+            Ai2Aim Inc. is a Canada-based emerging technology startup dedicated to harnessing artificial intelligence to address complex organizational challenges. With a mission to enhance knowledge management and collaboration in modern enterprises, Ai2Aim is developing flagship platforms that combine Employee Management Systems and Task Management Systems with advanced AI-driven intelligence. These solutions enable organizations to streamline operations, improve workforce productivity, and transform fragmented processes into seamless, scalable business outcomes.
           </p>
           
           {/* Key Stats */}
@@ -58,7 +58,7 @@ export default function About() {
                   <span className="text-foreground">2025</span>
                 </div>
                 <div className="flex justify-between" data-aos="fade-up" data-aos-delay="600">
-                  <span className="font-medium text-foreground/70">Headquarters:</span>
+                  <span className="font-medium text-foreground/70">Headquarter:</span>
                   <span className="text-foreground">Edmonton, Alberta, Canada</span>
                 </div>
                 <div className="flex justify-between" data-aos="fade-up" data-aos-delay="700">
@@ -124,7 +124,11 @@ export default function About() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
-                    Educational Technology (EdTech) & Corporate Training
+                    Employee Management Solutions
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
+                    Productivity Solutions
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />

@@ -177,7 +177,7 @@ export default function Index() {
             <div className="md:text-right" data-aos="fade-left" data-aos-delay="400">
               <div className="flex flex-col sm:flex-row gap-3 justify-end">
                 <DemoModal>
-                  <Button className="h-11 px-6">Start a project</Button>
+                  <Button className="h-11 px-6">Schedule a Demo</Button>
                 </DemoModal>
                 <ChatButton variant="outline" className="h-11 px-6">
                   Ask AimBot

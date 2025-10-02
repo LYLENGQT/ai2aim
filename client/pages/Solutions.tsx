@@ -42,7 +42,7 @@ export default function Solutions() {
           },{
             icon: Rocket,
             title: "Go-to-Market Speed",
-            desc: "90-day delivery cycles that ship value, not just slides.",
+            desc: "Fast, iterative launches that prioritize outcomes over presentations.",
           }].map(({icon:Icon, title, desc}, index) => (
             <Card key={title} className="group border-border/60 bg-background/80 backdrop-blur hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg" data-aos="fade-up" data-aos-delay={index * 100}>
               <CardHeader>
@@ -103,16 +103,16 @@ export default function Solutions() {
               </div>
             </div>
 
-            {/* Business Solutions */}
+            {/* Employee Management System */}
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                   <i className="fas fa-building text-white text-lg"></i>
                 </div>
-                <h3 className="text-xl font-bold">Business Solutions</h3>
+                <h3 className="text-xl font-bold">Employee Management System</h3>
               </div>
               <div className="space-y-2">
-                {["Business Automation", "Digital Transformation", "Innovation Consulting", "Performance Analytics", "Productivity Software"].map((item, index) => (
+                {["Business Automation", "Core HR Functions", "Talent Management", "Reporting & Analytics", "Performance Management"].map((item, index) => (
                   <div key={item} className="flex items-center gap-2 text-sm text-foreground/70 group-hover:text-foreground/90 transition-colors duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary opacity-60" />
                     {item}
@@ -121,16 +121,16 @@ export default function Solutions() {
               </div>
             </div>
 
-            {/* Education & Training */}
+            {/* Productivity Solution */}
             <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="400">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <i className="fas fa-graduation-cap text-white text-lg"></i>
+                  <i className="fas fa-tools text-white text-lg"></i>
                 </div>
-                <h3 className="text-xl font-bold">Education & Training</h3>
+                <h3 className="text-xl font-bold">Productivity Solution</h3>
               </div>
               <div className="space-y-2">
-                {["Educational Technology (EdTech)", "Corporate Training Solutions", "Academic & Corporate Collaboration Tools", "Skill Development Tools", "AI in Education"].map((item, index) => (
+                {["Task Management", "Collaboration & Communication", "Automated workflows", "Performance Tracking", "Integrated Platforms"].map((item, index) => (
                   <div key={item} className="flex items-center gap-2 text-sm text-foreground/70 group-hover:text-foreground/90 transition-colors duration-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent opacity-60" />
                     {item}
@@ -158,7 +158,7 @@ export default function Solutions() {
             </div>
 
             {/* Enterprise Solutions */}
-            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="600">
+            <div className="group rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-accent/40 hover:shadow-lg hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="500">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
                   <i className="fas fa-tools text-white text-lg"></i>
@@ -176,10 +176,10 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="700">
+          <div className="mt-12 text-center" data-aos="fade-up" data-aos-delay="600">
             <Link to="/contact">
               <Button className="h-12 px-8 text-base hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                Start Your Project
+                Schedule a Demo
                 <span className="ml-2">→</span>
               </Button>
             </Link>
