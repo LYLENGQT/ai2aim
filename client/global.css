@@ -50,6 +50,23 @@ div[style*="position: fixed"][style*="bottom"][style*="right"] {
   display: none !important;
 }
 
+/* More aggressive hiding of Chatbase elements */
+iframe[src*="chatbase"],
+div[data-chatbase],
+div[class*="chatbase"],
+div[id*="chatbase"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide any element with chatbase in the class or id */
+[class*="chatbase"]:not(.floating-chat-custom),
+[id*="chatbase"]:not(.floating-chat-custom) {
+  display: none !important;
+}
+
 /* Ensure our custom floating chat is always visible */
 .floating-chat-custom {
   z-index: 9999 !important;

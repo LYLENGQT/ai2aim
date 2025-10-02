@@ -16,6 +16,39 @@ export default function useChat() {
     }
   }, []);
 
+  // Hide default Chatbase widget
+  useEffect(() => {
+    const hideDefaultWidget = () => {
+      const selectors = [
+        '[data-chatbase-widget]',
+        '.chatbase-widget-button',
+        'div[style*="position: fixed"][style*="bottom"]',
+        'iframe[src*="chatbase"]',
+        'div[class*="chatbase"]',
+        'div[id*="chatbase"]'
+      ];
+      
+      selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+          if (!el.classList.contains('floating-chat-custom')) {
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.opacity = '0';
+            el.style.pointerEvents = 'none';
+          }
+        });
+      });
+    };
+
+    // Run immediately and then every 500ms for the first 5 seconds
+    hideDefaultWidget();
+    const interval = setInterval(hideDefaultWidget, 500);
+    setTimeout(() => clearInterval(interval), 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const openChat = () => {
     if (window.chatbase) {
       window.chatbase("open");
