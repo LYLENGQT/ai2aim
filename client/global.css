@@ -12,12 +12,17 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* Hide only the default Chatbase button, keep the widget */
+/* Hide only the default Chatbase button */
 .chatbase-widget-button {
   display: none !important;
 }
 
 /* Style the Chatbase widget when it opens */
+.chatbase-widget {
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
 .chatbase-widget-header {
   background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) !important;
   border-radius: 16px 16px 0 0 !important;
@@ -35,11 +40,6 @@
 .chatbase-widget-input:focus {
   border-color: hsl(var(--primary)) !important;
   box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1) !important;
-}
-
-/* Hide only the floating button, not the widget container */
-div[style*="position: fixed"][style*="bottom"][style*="right"]:not(.floating-chat-custom) {
-  display: none !important;
 }
 
 /* Ensure our custom floating chat is always visible */

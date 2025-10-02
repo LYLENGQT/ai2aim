@@ -16,29 +16,20 @@ export default function useChat() {
     }
   }, []);
 
-  // Hide default Chatbase widget button but keep the widget itself
+  // Hide only the default Chatbase button, not the widget
   useEffect(() => {
-    const hideDefaultWidget = () => {
-      // Only hide the button, not the widget itself
-      const buttonSelectors = [
-        '.chatbase-widget-button',
-        'div[style*="position: fixed"][style*="bottom"][style*="right"]:not(.floating-chat-custom)'
-      ];
-      
-      buttonSelectors.forEach(selector => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(el => {
-          if (!el.classList.contains('floating-chat-custom')) {
-            el.style.display = 'none';
-          }
-        });
+    const hideDefaultButton = () => {
+      // Only target the specific button class
+      const buttonElements = document.querySelectorAll('.chatbase-widget-button');
+      buttonElements.forEach(el => {
+        el.style.display = 'none';
       });
     };
 
-    // Run after a delay to let Chatbase initialize
-    const timer = setTimeout(hideDefaultWidget, 2000);
-    const interval = setInterval(hideDefaultWidget, 1000);
-    setTimeout(() => clearInterval(interval), 10000);
+    // Run after Chatbase has had time to initialize
+    const timer = setTimeout(hideDefaultButton, 3000);
+    const interval = setInterval(hideDefaultButton, 2000);
+    setTimeout(() => clearInterval(interval), 15000);
 
     return () => {
       clearTimeout(timer);
@@ -54,6 +45,22 @@ export default function useChat() {
       try {
         window.chatbase("open");
         console.log("Chatbase open command sent");
+        
+        // Check if widget is visible after opening
+        setTimeout(() => {
+          const widget = document.querySelector('[data-chatbase-widget]') || 
+                        document.querySelector('.chatbase-widget') ||
+                        document.querySelector('iframe[src*="chatbase"]');
+          console.log("Widget found after open:", !!widget);
+          if (widget) {
+            console.log("Widget styles:", {
+              display: widget.style.display,
+              visibility: widget.style.visibility,
+              opacity: widget.style.opacity,
+              zIndex: widget.style.zIndex
+            });
+          }
+        }, 1000);
       } catch (error) {
         console.error("Error opening chatbase:", error);
       }
