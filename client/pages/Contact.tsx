@@ -46,8 +46,8 @@ export default function Contact() {
       </section>
 
       <section className="container pb-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <form onSubmit={onSubmit} className="grid gap-4 rounded-xl border border-border/60 bg-background/80 p-6 shadow-sm backdrop-blur animate-fade-in-up hover-lift max-w-lg mx-auto lg:mx-0">
+        <div className="grid gap-6 lg:grid-cols-2 lg:items-start">
+          <form onSubmit={onSubmit} className="grid gap-4 rounded-xl border border-border/60 bg-background/80 p-6 shadow-sm backdrop-blur animate-fade-in-up hover-lift max-w-lg mx-auto lg:mx-auto">
             <div className="grid grid-cols-2 gap-3">
               <div className="grid gap-1">
                 <label className="text-sm font-medium">First Name*</label>
@@ -144,7 +144,7 @@ export default function Contact() {
             </Button>
           </form>
 
-          <div className="space-y-4 max-w-md mx-auto lg:mx-0">
+          <div className="space-y-4 max-w-md mx-auto lg:mx-auto">
             {/* Contact Information */}
             <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-4 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
               <div className="flex items-center gap-2 mb-2">
