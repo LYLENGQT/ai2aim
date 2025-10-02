@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { MessageCircle } from "lucide-react";
+import useChat from "../hooks/useChat";
 
 interface ChatButtonProps {
   children?: React.ReactNode;
@@ -14,10 +15,10 @@ export default function ChatButton({
   size = "default",
   className = ""
 }: ChatButtonProps) {
+  const { openChat } = useChat();
+
   const handleChatClick = () => {
-    if (window.chatbase) {
-      window.chatbase("open");
-    }
+    openChat();
   };
 
   return (

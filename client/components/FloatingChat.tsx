@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { MessageCircle, X } from "lucide-react";
+import useChat from "../hooks/useChat";
 
 export default function FloatingChat() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const { openChat } = useChat();
 
   useEffect(() => {
     // Show floating chat after 3 seconds
@@ -16,17 +17,7 @@ export default function FloatingChat() {
   }, []);
 
   const handleChatClick = () => {
-    if (window.chatbase) {
-      window.chatbase("open");
-    }
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    if (window.chatbase) {
-      window.chatbase("close");
-    }
-    setIsOpen(false);
+    openChat();
   };
 
   if (!isVisible) return null;
@@ -68,50 +59,6 @@ export default function FloatingChat() {
         </div>
       </div>
 
-      {/* Chat Widget Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 pointer-events-none">
-          <div className="absolute bottom-6 right-6 w-80 h-96 bg-white rounded-2xl shadow-2xl border border-gray-200 pointer-events-auto">
-            <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <MessageCircle className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">AimBot</h3>
-                  <p className="text-xs text-gray-600">Online</p>
-                </div>
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleClose}
-                className="h-8 w-8 p-0 hover:bg-gray-100"
-              >
-                <X className="h-4 w-4" />
-              </Button>
-            </div>
-            <div className="p-4 h-80 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-6 h-6 text-primary" />
-                </div>
-                <p className="text-gray-600 mb-4">Click to start chatting with AimBot!</p>
-                <Button 
-                  onClick={() => {
-                    if (window.chatbase) {
-                      window.chatbase("open");
-                    }
-                  }}
-                  className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90"
-                >
-                  Open Chat
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

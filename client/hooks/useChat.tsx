@@ -50,8 +50,26 @@ export default function useChat() {
   }, []);
 
   const openChat = () => {
+    console.log("Attempting to open chat...");
+    console.log("window.chatbase available:", !!window.chatbase);
+    
     if (window.chatbase) {
-      window.chatbase("open");
+      try {
+        window.chatbase("open");
+        console.log("Chatbase open command sent");
+      } catch (error) {
+        console.error("Error opening chatbase:", error);
+      }
+    } else {
+      console.warn("Chatbase not available yet, retrying in 1 second...");
+      setTimeout(() => {
+        if (window.chatbase) {
+          window.chatbase("open");
+          console.log("Chatbase opened after retry");
+        } else {
+          console.error("Chatbase still not available after retry");
+        }
+      }, 1000);
     }
   };
 
