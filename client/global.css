@@ -6,50 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Chatbase Custom Styling */
-.chatbase-widget {
-  border-radius: 16px !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-}
-
-/* Hide only the default Chatbase button */
-.chatbase-widget-button {
-  display: none !important;
-}
-
-/* Style the Chatbase widget when it opens */
-.chatbase-widget {
-  border-radius: 16px !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
-}
-
-.chatbase-widget-header {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) !important;
-  border-radius: 16px 16px 0 0 !important;
-}
-
-.chatbase-widget-message {
-  border-radius: 12px !important;
-}
-
-.chatbase-widget-input {
-  border-radius: 12px !important;
-  border: 1px solid hsl(var(--border)) !important;
-}
-
-.chatbase-widget-input:focus {
-  border-color: hsl(var(--primary)) !important;
-  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1) !important;
-}
-
-/* Ensure our custom floating chat is always visible */
-.floating-chat-custom {
-  z-index: 9999 !important;
-  position: fixed !important;
-  bottom: 24px !important;
-  right: 24px !important;
-}
-
 @layer base {
   /**
    * Tailwind CSS theme
@@ -355,4 +311,32 @@
   .grid-responsive-4 {
     @apply grid grid-cols-2 md:grid-cols-4;
   }
+}
+
+/* Chatbase Custom Styling */
+.chatbase-widget {
+  --chatbase-primary-color: hsl(var(--primary));
+  --chatbase-accent-color: hsl(var(--accent));
+  --chatbase-background: hsl(var(--background));
+  --chatbase-foreground: hsl(var(--foreground));
+  --chatbase-border: hsl(var(--border));
+}
+
+/* Custom chat widget styling */
+.chatbase-widget iframe {
+  border-radius: 16px !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Chat button styling */
+.chatbase-button {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.chatbase-button:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15) !important;
 }

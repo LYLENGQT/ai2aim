@@ -16,38 +16,7 @@
     <script type="module" src="/client/App.tsx"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    (function(){
-      // Initialize Chatbase but prevent default widget
-      if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-        window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};
-        window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}});
-      }
-      
-      const onLoad=function(){
-        const script=document.createElement("script");
-        script.src="https://www.chatbase.co/embed.min.js";
-        script.id="8vqH1oKJkpgmJdmHhrQrT";
-        script.domain="www.chatbase.co";
-        script.onload = function() {
-          console.log("Chatbase script loaded");
-          // Ensure chatbase is available globally
-          if (window.chatbase) {
-            console.log("Chatbase initialized successfully");
-          }
-        };
-        document.body.appendChild(script);
-        
-        // Hide only the default button after it loads
-        setTimeout(() => {
-          const defaultButton = document.querySelector('.chatbase-widget-button');
-          if (defaultButton) {
-            defaultButton.style.display = 'none';
-          }
-        }, 3000);
-      };
-      
-      if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
-    })();
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="8vqH1oKJkpgmJdmHhrQrT";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
   </body>
 </html>

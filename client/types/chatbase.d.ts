@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    chatbase: (action: string) => void;
+    chatbase: (action: string, ...args: any[]) => void;
   }
 }
 

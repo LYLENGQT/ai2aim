@@ -4,10 +4,10 @@ import SiteFooter from "./SiteFooter";
 import FloatingActionButton from "./FloatingActionButton";
 import FloatingChat from "./FloatingChat";
 import ChatModal from "./ChatModal";
-import useChat from "../hooks/useChat";
+import useChatManager from "../hooks/useChatManager";
 
 export default function SiteLayout({ children }: PropsWithChildren) {
-  const { isModalOpen, handleModalClose, handleModalChat } = useChat();
+  const { showModal, closeModal } = useChatManager();
 
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto] bg-background">
@@ -16,10 +16,7 @@ export default function SiteLayout({ children }: PropsWithChildren) {
       <SiteFooter />
       <FloatingActionButton />
       <FloatingChat />
-      <ChatModal 
-        isOpen={isModalOpen} 
-        onClose={handleModalClose}
-      />
+      <ChatModal isOpen={showModal} onClose={closeModal} />
     </div>
   );
 }

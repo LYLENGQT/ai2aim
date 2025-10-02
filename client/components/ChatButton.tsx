@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { MessageCircle } from "lucide-react";
-import useChat from "../hooks/useChat";
 
 interface ChatButtonProps {
   children?: React.ReactNode;
@@ -13,24 +12,24 @@ export default function ChatButton({
   children, 
   variant = "default", 
   size = "default",
-  className = ""
+  className 
 }: ChatButtonProps) {
-  const { openChat } = useChat();
-
-  const handleChatClick = () => {
-    openChat();
+  const openChat = () => {
+    if (window.chatbase) {
+      window.chatbase("open");
+    }
   };
 
   return (
     <Button
-      onClick={handleChatClick}
+      onClick={openChat}
       variant={variant}
       size={size}
-      className={`${className} ${variant === "default" ? "bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90" : ""}`}
+      className={className}
     >
       {children || (
         <>
-          <MessageCircle className="w-4 h-4 mr-2" />
+          <MessageCircle className="mr-2 h-4 w-4" />
           Chat with AimBot
         </>
       )}

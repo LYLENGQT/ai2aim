@@ -33,11 +33,6 @@ export default function Index() {
                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </DemoModal>
-              <ChatButton 
-                variant="outline" 
-                size="lg"
-                className="h-12 px-6 text-base"
-              />
               <a href="#solutions" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
                 See solutions
               </a>
@@ -180,9 +175,14 @@ export default function Index() {
               <p className="text-foreground/70">Share your objectives and constraints—we will propose a practical path that respects your reality.</p>
             </div>
             <div className="md:text-right" data-aos="fade-left" data-aos-delay="400">
-              <DemoModal>
-                <Button className="h-11 px-6">Start a project</Button>
-              </DemoModal>
+              <div className="flex flex-col sm:flex-row gap-3 justify-end">
+                <DemoModal>
+                  <Button className="h-11 px-6">Start a project</Button>
+                </DemoModal>
+                <ChatButton variant="outline" className="h-11 px-6">
+                  Ask AimBot
+                </ChatButton>
+              </div>
             </div>
           </div>
         </div>
