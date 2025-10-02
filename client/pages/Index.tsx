@@ -3,6 +3,7 @@ import SiteLayout from "../components/SiteLayout";
 import { Button } from "../components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
 import DemoModal from "../components/DemoModal";
+import ChatButton from "../components/ChatButton";
 
 export default function Index() {
   return (
@@ -32,6 +33,11 @@ export default function Index() {
                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </DemoModal>
+              <ChatButton 
+                variant="outline" 
+                size="lg"
+                className="h-12 px-6 text-base"
+              />
               <a href="#solutions" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
                 See solutions
               </a>
