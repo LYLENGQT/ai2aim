@@ -45,40 +45,40 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="container pb-12">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <form onSubmit={onSubmit} className="grid gap-4 rounded-2xl border border-border/60 bg-background/80 p-6 shadow-sm backdrop-blur animate-fade-in-up hover-lift">
-            <div className="grid grid-cols-2 gap-3">
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '100ms'}}>
+      <section className="container pb-8">
+        <div className="grid gap-4 lg:grid-cols-2">
+          <form onSubmit={onSubmit} className="grid gap-3 rounded-2xl border border-border/60 bg-background/80 p-4 shadow-sm backdrop-blur animate-fade-in-up hover-lift">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="grid gap-1">
                 <label className="text-xs font-medium">First Name*</label>
-                <Input required placeholder="First name" className="h-8 text-sm focus:scale-105 transition-transform duration-300" />
+                <Input required placeholder="First name" className="h-7 text-xs" />
               </div>
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <div className="grid gap-1">
                 <label className="text-xs font-medium">Last Name*</label>
-                <Input required placeholder="Last name" className="h-8 text-sm focus:scale-105 transition-transform duration-300" />
+                <Input required placeholder="Last name" className="h-7 text-xs" />
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-3">
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '300ms'}}>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="grid gap-1">
                 <label className="text-xs font-medium">Email*</label>
-                <Input type="email" required placeholder="your.email@company.com" className="h-8 text-sm focus:scale-105 transition-transform duration-300" />
+                <Input type="email" required placeholder="your.email@company.com" className="h-7 text-xs" />
               </div>
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '400ms'}}>
+              <div className="grid gap-1">
                 <label className="text-xs font-medium">Phone*</label>
-                <Input type="tel" required placeholder="+1 (555) 123-4567" className="h-8 text-sm focus:scale-105 transition-transform duration-300" />
+                <Input type="tel" required placeholder="+1 (555) 123-4567" className="h-7 text-xs" />
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-3">
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '500ms'}}>
-                <label className="text-xs font-medium">Company Name*</label>
-                <Input required placeholder="Company name" className="h-8 text-sm focus:scale-105 transition-transform duration-300" />
+            <div className="grid grid-cols-2 gap-2">
+              <div className="grid gap-1">
+                <label className="text-xs font-medium">Company*</label>
+                <Input required placeholder="Company name" className="h-7 text-xs" />
               </div>
-              <div className="grid gap-1 animate-fade-in-up" style={{animationDelay: '600ms'}}>
+              <div className="grid gap-1">
                 <label className="text-xs font-medium">Employees*</label>
                 <Select>
-                  <SelectTrigger className="h-8 text-sm focus:scale-105 transition-transform duration-300">
+                  <SelectTrigger className="h-7 text-xs">
                     <SelectValue placeholder="Select count" />
                   </SelectTrigger>
                   <SelectContent>
@@ -93,11 +93,11 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2">
               <div className="grid gap-1">
                 <label className="text-xs font-medium">Country</label>
                 <Select>
-                  <SelectTrigger className="h-8 text-sm">
+                  <SelectTrigger className="h-7 text-xs">
                     <SelectValue placeholder="Select country" />
                   </SelectTrigger>
                   <SelectContent>
@@ -117,9 +117,9 @@ export default function Contact() {
                 </Select>
               </div>
               <div className="grid gap-1">
-                <label className="text-xs font-medium">Best Time to Call*</label>
+                <label className="text-xs font-medium">Best Time*</label>
                 <Select>
-                  <SelectTrigger className="h-8 text-sm">
+                  <SelectTrigger className="h-7 text-xs">
                     <SelectValue placeholder="Select time" />
                   </SelectTrigger>
                   <SelectContent>
@@ -132,68 +132,68 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-2 py-2">
-              <Checkbox id="contact-permission" required className="h-4 w-4" />
+            <div className="flex items-center space-x-2 py-1">
+              <Checkbox id="contact-permission" required className="h-3 w-3" />
               <label htmlFor="contact-permission" className="text-xs font-medium">
                 May We Contact You?*
               </label>
             </div>
             
-            <Button type="submit" className="w-full h-10 text-sm font-medium animate-fade-in-up hover:scale-105 transition-all duration-300 hover:shadow-lg" style={{animationDelay: '800ms'}}>
+            <Button type="submit" className="w-full h-8 text-xs font-medium">
               Book A Demo
             </Button>
           </form>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Contact Information */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-map-marker-alt text-white text-lg"></i>
+            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-4 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-map-marker-alt text-white text-sm"></i>
                 </div>
-                <h3 className="text-xl font-bold">Get In Touch</h3>
+                <h3 className="text-lg font-bold">Get In Touch</h3>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <i className="fas fa-building text-primary mt-1"></i>
+              <div className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <i className="fas fa-building text-primary mt-1 text-sm"></i>
                   <div>
-                    <p className="font-medium text-foreground">Headquarters</p>
-                    <p className="text-sm text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2, Canada</p>
+                    <p className="font-medium text-foreground text-sm">Headquarters</p>
+                    <p className="text-xs text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2, Canada</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <i className="fas fa-envelope text-accent mt-1"></i>
+                <div className="flex items-start gap-2">
+                  <i className="fas fa-envelope text-accent mt-1 text-sm"></i>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-foreground/70">contact@ai2aim.ai</p>
+                    <p className="font-medium text-foreground text-sm">Email</p>
+                    <p className="text-xs text-foreground/70">contact@ai2aim.ai</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <i className="fas fa-clock text-primary mt-1"></i>
+                <div className="flex items-start gap-2">
+                  <i className="fas fa-clock text-primary mt-1 text-sm"></i>
                   <div>
-                    <p className="font-medium text-foreground">Business Hours</p>
-                    <p className="text-sm text-foreground/70">Mon–Fri, 9am–6pm (MST)</p>
+                    <p className="font-medium text-foreground text-sm">Business Hours</p>
+                    <p className="text-xs text-foreground/70">Mon–Fri, 9am–6pm (MST)</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Global Presence */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <i className="fas fa-globe text-white text-lg"></i>
+            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <i className="fas fa-globe text-white text-sm"></i>
                 </div>
-                <h3 className="text-xl font-bold">Global Presence</h3>
+                <h3 className="text-lg font-bold">Global Presence</h3>
               </div>
-              <div className="space-y-4">
-                <div className="text-center p-6 rounded-lg bg-background/50">
-                  <i className="fas fa-map-marker-alt text-3xl mb-3 text-primary"></i>
-                  <p className="font-medium text-lg">Edmonton, Alberta</p>
-                  <p className="text-sm text-foreground/70">Headquarters & Operations</p>
+              <div className="space-y-3">
+                <div className="text-center p-4 rounded-lg bg-background/50">
+                  <i className="fas fa-map-marker-alt text-2xl mb-2 text-primary"></i>
+                  <p className="font-medium text-base">Edmonton, Alberta</p>
+                  <p className="text-xs text-foreground/70">Headquarters & Operations</p>
                 </div>
-                <div className="mt-4 p-4 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
-                  <p className="text-sm text-foreground/80 text-center">
+                <div className="mt-2 p-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
+                  <p className="text-xs text-foreground/80 text-center">
                     <span className="font-medium">24/7 Support</span> across time zones
                   </p>
                 </div>
@@ -201,23 +201,23 @@ export default function Contact() {
             </div>
 
             {/* Why Choose Us */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-star text-white text-lg"></i>
+            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-star text-white text-sm"></i>
                 </div>
-                <h3 className="text-xl font-bold">Why Choose Us</h3>
+                <h3 className="text-lg font-bold">Why Choose Us</h3>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {[
                   "90-day delivery cycles",
                   "Enterprise-grade security",
                   "Custom AI solutions",
                   "Dedicated support team"
                 ].map((item, index) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <i className="fas fa-check-circle text-primary text-sm"></i>
-                    <span className="text-sm text-foreground/80">{item}</span>
+                  <div key={item} className="flex items-center gap-2">
+                    <i className="fas fa-check-circle text-primary text-xs"></i>
+                    <span className="text-xs text-foreground/80">{item}</span>
                   </div>
                 ))}
               </div>
