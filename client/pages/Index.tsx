@@ -16,7 +16,7 @@ export default function Index() {
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               AI Engineering & Automation
             </div>
-            <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl animate-fade-in-up animation-delay-200 font-heading">
+            <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl animate-fade-in-up animation-delay-200 font-primary">
               <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
                 We build AI systems that convert intent into outcomes
               </span>
