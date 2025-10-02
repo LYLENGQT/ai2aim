@@ -39,13 +39,13 @@ export default function About() {
 
       <section className="container section-padding">
         <div className="mx-auto max-w-4xl content-spacing">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl text-center px-4 sm:px-0">Company Overview</h2>
-          <p className="text-center text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto mt-4 px-4 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight md:text-4xl text-center px-4 sm:px-0 animate-fade-in-up">Company Overview</h2>
+          <p className="text-center text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto mt-4 px-4 sm:px-0 animate-fade-in-up animation-delay-200">
             Building the future of AI-powered business solutions with a focus on innovation and enterprise excellence.
           </p>
           
           <div className="grid gap-6 md:gap-8 md:grid-cols-2 mt-12">
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm">
+            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm animate-fade-in-up animation-delay-400 hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                   <i className="fas fa-building text-white text-lg"></i>
@@ -53,26 +53,26 @@ export default function About() {
                 <h3 className="text-xl font-bold">Key Information</h3>
               </div>
               <div className="space-y-4 text-sm">
-                <div className="flex justify-between">
+                <div className="flex justify-between animate-fade-in-up animation-delay-500">
                   <span className="font-medium text-foreground/70">Founded:</span>
                   <span className="text-foreground">2025</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between animate-fade-in-up animation-delay-600">
                   <span className="font-medium text-foreground/70">Headquarters:</span>
                   <span className="text-foreground">Edmonton, Alberta, Canada</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between animate-fade-in-up animation-delay-700">
                   <span className="font-medium text-foreground/70">Company Size:</span>
                   <span className="text-foreground">11-50 employees</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between animate-fade-in-up animation-delay-800">
                   <span className="font-medium text-foreground/70">Industry:</span>
                   <span className="text-foreground">Technology, Information and Internet</span>
                 </div>
               </div>
             </div>
             
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm">
+            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm animate-fade-in-up animation-delay-600 hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
                   <i className="fas fa-bullseye text-white text-lg"></i>
@@ -80,19 +80,19 @@ export default function About() {
                 <h3 className="text-xl font-bold">Our Focus</h3>
               </div>
               <div className="space-y-3 text-sm text-foreground/70">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in-up animation-delay-700">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
                   <span>AI-powered solutions for organizational challenges</span>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in-up animation-delay-800">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
                   <span>Knowledge management and collaboration</span>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in-up animation-delay-900">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
                   <span>Streamlining operations and business processes</span>
                 </div>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 animate-fade-in-up animation-delay-1000">
                   <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
                   <span>Enterprise-grade platform development</span>
                 </div>
