@@ -144,80 +144,44 @@ export default function Contact() {
             </Button>
           </form>
 
-          <div className="space-y-6 w-full max-w-lg">
+          <div className="space-y-4 w-full max-w-md">
             {/* Contact Information */}
-            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-map-marker-alt text-white text-sm"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-4 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-map-marker-alt text-white text-xs"></i>
                 </div>
-                <h3 className="text-base font-bold">Get In Touch</h3>
+                <h3 className="text-sm font-bold">Contact Info</h3>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-start gap-1">
-                  <i className="fas fa-building text-primary mt-0.5 text-sm"></i>
-                  <div>
-                    <p className="font-medium text-foreground text-sm">Headquarters</p>
-                    <p className="text-sm text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2</p>
-                  </div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <i className="fas fa-envelope text-accent text-xs"></i>
+                  <p className="text-xs text-foreground/70">contact@ai2aim.ai</p>
                 </div>
-                <div className="flex items-start gap-1">
-                  <i className="fas fa-envelope text-accent mt-0.5 text-sm"></i>
-                  <div>
-                    <p className="font-medium text-foreground text-sm">Email</p>
-                    <p className="text-sm text-foreground/70">contact@ai2aim.ai</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-1">
-                  <i className="fas fa-clock text-primary mt-0.5 text-sm"></i>
-                  <div>
-                    <p className="font-medium text-foreground text-sm">Hours</p>
-                    <p className="text-sm text-foreground/70">Mon–Fri, 9am–6pm (MST)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Global Presence */}
-            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <i className="fas fa-globe text-white text-sm"></i>
-                </div>
-                <h3 className="text-base font-bold">Global Presence</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="text-center p-3 rounded-lg bg-background/50">
-                  <i className="fas fa-map-marker-alt text-xl mb-1 text-primary"></i>
-                  <p className="font-medium text-sm">Edmonton, Alberta</p>
-                  <p className="text-sm text-foreground/70">Headquarters & Operations</p>
-                </div>
-                <div className="mt-1 p-2 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
-                  <p className="text-sm text-foreground/80 text-center">
-                    <span className="font-medium">24/7 Support</span> across time zones
-                  </p>
+                <div className="flex items-start gap-2">
+                  <i className="fas fa-map-marker-alt text-primary text-xs"></i>
+                  <p className="text-xs text-foreground/70">Edmonton, Alberta</p>
                 </div>
               </div>
             </div>
 
             {/* Why Choose Us */}
-            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-6 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
-              <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-star text-white text-sm"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-star text-white text-xs"></i>
                 </div>
-                <h3 className="text-base font-bold">Why Choose Us</h3>
+                <h3 className="text-sm font-bold">Why Choose Us</h3>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {[
                   "90-day delivery cycles",
                   "Enterprise-grade security",
-                  "Custom AI solutions",
-                  "Dedicated support team"
+                  "Custom AI solutions"
                 ].map((item, index) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <i className="fas fa-check-circle text-primary text-sm"></i>
-                    <span className="text-sm text-foreground/80">{item}</span>
+                  <div key={item} className="flex items-center gap-2">
+                    <i className="fas fa-check-circle text-primary text-xs"></i>
+                    <span className="text-xs text-foreground/80">{item}</span>
                   </div>
                 ))}
               </div>
