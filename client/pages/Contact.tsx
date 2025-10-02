@@ -45,82 +45,82 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="container pb-8">
-        <div className="grid gap-4 lg:grid-cols-2">
-          <form onSubmit={onSubmit} className="grid gap-3 rounded-2xl border border-border/60 bg-background/80 p-4 shadow-sm backdrop-blur animate-fade-in-up hover-lift">
-            <div className="grid grid-cols-2 gap-2">
-              <div className="grid gap-1">
-                <label className="text-xs font-medium">First Name*</label>
-                <Input required placeholder="First name" className="h-7 text-xs" />
+      <section className="container pb-6">
+        <div className="grid gap-3 lg:grid-cols-2">
+          <form onSubmit={onSubmit} className="grid gap-2 rounded-xl border border-border/60 bg-background/80 p-3 shadow-sm backdrop-blur animate-fade-in-up hover-lift">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="grid gap-0.5">
+                <label className="text-xs font-medium">First*</label>
+                <Input required placeholder="First name" className="h-6 text-xs" />
               </div>
-              <div className="grid gap-1">
-                <label className="text-xs font-medium">Last Name*</label>
-                <Input required placeholder="Last name" className="h-7 text-xs" />
+              <div className="grid gap-0.5">
+                <label className="text-xs font-medium">Last*</label>
+                <Input required placeholder="Last name" className="h-6 text-xs" />
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-2">
-              <div className="grid gap-1">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="grid gap-0.5">
                 <label className="text-xs font-medium">Email*</label>
-                <Input type="email" required placeholder="your.email@company.com" className="h-7 text-xs" />
+                <Input type="email" required placeholder="email@company.com" className="h-6 text-xs" />
               </div>
-              <div className="grid gap-1">
+              <div className="grid gap-0.5">
                 <label className="text-xs font-medium">Phone*</label>
-                <Input type="tel" required placeholder="+1 (555) 123-4567" className="h-7 text-xs" />
+                <Input type="tel" required placeholder="+1 (555) 123-4567" className="h-6 text-xs" />
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-2">
-              <div className="grid gap-1">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="grid gap-0.5">
                 <label className="text-xs font-medium">Company*</label>
-                <Input required placeholder="Company name" className="h-7 text-xs" />
+                <Input required placeholder="Company" className="h-6 text-xs" />
               </div>
-              <div className="grid gap-1">
-                <label className="text-xs font-medium">Employees*</label>
+              <div className="grid gap-0.5">
+                <label className="text-xs font-medium">Size*</label>
                 <Select>
-                  <SelectTrigger className="h-7 text-xs">
-                    <SelectValue placeholder="Select count" />
+                  <SelectTrigger className="h-6 text-xs">
+                    <SelectValue placeholder="Select" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="1-10">1 - 10</SelectItem>
-                    <SelectItem value="11-50">11 - 50</SelectItem>
-                    <SelectItem value="51-200">51 - 200</SelectItem>
-                    <SelectItem value="201-500">201 - 500</SelectItem>
-                    <SelectItem value="501-1000">501 - 1000</SelectItem>
+                    <SelectItem value="1-10">1-10</SelectItem>
+                    <SelectItem value="11-50">11-50</SelectItem>
+                    <SelectItem value="51-200">51-200</SelectItem>
+                    <SelectItem value="201-500">201-500</SelectItem>
+                    <SelectItem value="501-1000">501-1000</SelectItem>
                     <SelectItem value="1000+">1000+</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-2">
-              <div className="grid gap-1">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="grid gap-0.5">
                 <label className="text-xs font-medium">Country</label>
                 <Select>
-                  <SelectTrigger className="h-7 text-xs">
-                    <SelectValue placeholder="Select country" />
+                  <SelectTrigger className="h-6 text-xs">
+                    <SelectValue placeholder="Select" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="US">United States</SelectItem>
-                    <SelectItem value="CA">Canada</SelectItem>
-                    <SelectItem value="GB">United Kingdom</SelectItem>
-                    <SelectItem value="AU">Australia</SelectItem>
-                    <SelectItem value="DE">Germany</SelectItem>
-                    <SelectItem value="FR">France</SelectItem>
-                    <SelectItem value="JP">Japan</SelectItem>
-                    <SelectItem value="IN">India</SelectItem>
-                    <SelectItem value="CN">China</SelectItem>
-                    <SelectItem value="BR">Brazil</SelectItem>
-                    <SelectItem value="MX">Mexico</SelectItem>
+                    <SelectItem value="US">US</SelectItem>
+                    <SelectItem value="CA">CA</SelectItem>
+                    <SelectItem value="GB">UK</SelectItem>
+                    <SelectItem value="AU">AU</SelectItem>
+                    <SelectItem value="DE">DE</SelectItem>
+                    <SelectItem value="FR">FR</SelectItem>
+                    <SelectItem value="JP">JP</SelectItem>
+                    <SelectItem value="IN">IN</SelectItem>
+                    <SelectItem value="CN">CN</SelectItem>
+                    <SelectItem value="BR">BR</SelectItem>
+                    <SelectItem value="MX">MX</SelectItem>
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-              <div className="grid gap-1">
-                <label className="text-xs font-medium">Best Time*</label>
+              <div className="grid gap-0.5">
+                <label className="text-xs font-medium">Time*</label>
                 <Select>
-                  <SelectTrigger className="h-7 text-xs">
-                    <SelectValue placeholder="Select time" />
+                  <SelectTrigger className="h-6 text-xs">
+                    <SelectValue placeholder="Select" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="morning">Morning</SelectItem>
@@ -132,46 +132,46 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-2 py-1">
+            <div className="flex items-center space-x-1 py-0.5">
               <Checkbox id="contact-permission" required className="h-3 w-3" />
               <label htmlFor="contact-permission" className="text-xs font-medium">
-                May We Contact You?*
+                Contact Permission*
               </label>
             </div>
             
-            <Button type="submit" className="w-full h-8 text-xs font-medium">
-              Book A Demo
+            <Button type="submit" className="w-full h-7 text-xs font-medium">
+              Book Demo
             </Button>
           </form>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Contact Information */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-4 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-map-marker-alt text-white text-sm"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-background/80 to-background/60 p-3 shadow-sm backdrop-blur-sm animate-fade-in-up" style={{animationDelay: '200ms'}}>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-map-marker-alt text-white text-xs"></i>
                 </div>
-                <h3 className="text-lg font-bold">Get In Touch</h3>
+                <h3 className="text-sm font-bold">Get In Touch</h3>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <i className="fas fa-building text-primary mt-1 text-sm"></i>
+              <div className="space-y-2">
+                <div className="flex items-start gap-1">
+                  <i className="fas fa-building text-primary mt-0.5 text-xs"></i>
                   <div>
-                    <p className="font-medium text-foreground text-sm">Headquarters</p>
-                    <p className="text-xs text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2, Canada</p>
+                    <p className="font-medium text-foreground text-xs">Headquarters</p>
+                    <p className="text-xs text-foreground/70">9623-66 Avenue NW<br />Edmonton, Alberta T6E 0M2</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <i className="fas fa-envelope text-accent mt-1 text-sm"></i>
+                <div className="flex items-start gap-1">
+                  <i className="fas fa-envelope text-accent mt-0.5 text-xs"></i>
                   <div>
-                    <p className="font-medium text-foreground text-sm">Email</p>
+                    <p className="font-medium text-foreground text-xs">Email</p>
                     <p className="text-xs text-foreground/70">contact@ai2aim.ai</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <i className="fas fa-clock text-primary mt-1 text-sm"></i>
+                <div className="flex items-start gap-1">
+                  <i className="fas fa-clock text-primary mt-0.5 text-xs"></i>
                   <div>
-                    <p className="font-medium text-foreground text-sm">Business Hours</p>
+                    <p className="font-medium text-foreground text-xs">Hours</p>
                     <p className="text-xs text-foreground/70">Mon–Fri, 9am–6pm (MST)</p>
                   </div>
                 </div>
@@ -179,20 +179,20 @@ export default function Contact() {
             </div>
 
             {/* Global Presence */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
-                  <i className="fas fa-globe text-white text-sm"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-accent/10 via-primary/10 to-background p-3 shadow-sm animate-fade-in-up" style={{animationDelay: '300ms'}}>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <i className="fas fa-globe text-white text-xs"></i>
                 </div>
-                <h3 className="text-lg font-bold">Global Presence</h3>
+                <h3 className="text-sm font-bold">Global Presence</h3>
               </div>
-              <div className="space-y-3">
-                <div className="text-center p-4 rounded-lg bg-background/50">
-                  <i className="fas fa-map-marker-alt text-2xl mb-2 text-primary"></i>
-                  <p className="font-medium text-base">Edmonton, Alberta</p>
+              <div className="space-y-2">
+                <div className="text-center p-3 rounded-lg bg-background/50">
+                  <i className="fas fa-map-marker-alt text-xl mb-1 text-primary"></i>
+                  <p className="font-medium text-sm">Edmonton, Alberta</p>
                   <p className="text-xs text-foreground/70">Headquarters & Operations</p>
                 </div>
-                <div className="mt-2 p-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
+                <div className="mt-1 p-2 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
                   <p className="text-xs text-foreground/80 text-center">
                     <span className="font-medium">24/7 Support</span> across time zones
                   </p>
@@ -201,21 +201,21 @@ export default function Contact() {
             </div>
 
             {/* Why Choose Us */}
-            <div className="rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-4 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <i className="fas fa-star text-white text-sm"></i>
+            <div className="rounded-xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-3 shadow-sm animate-fade-in-up" style={{animationDelay: '400ms'}}>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <i className="fas fa-star text-white text-xs"></i>
                 </div>
-                <h3 className="text-lg font-bold">Why Choose Us</h3>
+                <h3 className="text-sm font-bold">Why Choose Us</h3>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {[
                   "90-day delivery cycles",
                   "Enterprise-grade security",
                   "Custom AI solutions",
                   "Dedicated support team"
                 ].map((item, index) => (
-                  <div key={item} className="flex items-center gap-2">
+                  <div key={item} className="flex items-center gap-1">
                     <i className="fas fa-check-circle text-primary text-xs"></i>
                     <span className="text-xs text-foreground/80">{item}</span>
                   </div>
