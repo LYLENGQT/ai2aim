@@ -13,19 +13,19 @@ export default function Index() {
         </div>
         <div className="container py-12 md:py-16">
           <div className="mx-auto max-w-3xl text-center space-y-6">
-            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs text-foreground/70 shadow-sm animate-fade-in-up">
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-4 py-1 text-xs text-foreground/70 shadow-sm" data-aos="fade-up">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               AI Engineering & Automation
             </div>
-            <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl animate-fade-in-up animation-delay-200 font-heading">
+            <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl font-heading" data-aos="fade-up" data-aos-delay="200">
               <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
                 We build AI systems that convert intent into outcomes
               </span>
             </h1>
-            <p className="mx-auto max-w-2xl text-base sm:text-lg text-foreground/70 animate-fade-in-up animation-delay-400 px-4 sm:px-0">
+            <p className="mx-auto max-w-2xl text-base sm:text-lg text-foreground/70 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="400">
             Ai2Aim is a dedicated team building and scaling practical and secure AI solutions, including LLM applications, automation, data platforms, and MLOps, to streamline operations and solve complex business challenges for measurable results.
             </p>
-            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-in-up animation-delay-600">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row" data-aos="fade-up" data-aos-delay="600">
               <DemoModal>
                 <Button className="h-12 px-6 text-base shadow-[0_0_35px_-10px_hsl(var(--primary))] hover:shadow-[0_0_50px_-10px_hsl(var(--primary))] transition-all duration-300 hover:scale-105">
                   Book a demo
@@ -36,7 +36,7 @@ export default function Index() {
                 See solutions
               </a>
             </div>
-            <div className="grid place-items-center animate-fade-in-up animation-delay-800">
+            <div className="grid place-items-center" data-aos="fade-up" data-aos-delay="800">
               <div className="flex items-center gap-2 text-sm text-foreground/60">
                 <div className="flex -space-x-2">
                   <span className="h-7 w-7 rounded-full border border-white/70 bg-gradient-to-br from-primary/70 to-accent/70 animate-bounce" style={{animationDelay: '0s'}} />
@@ -59,7 +59,7 @@ export default function Index() {
 
       <section id="solutions" className="border-t border-border/60 bg-muted/20">
         <div className="container py-12 md:py-16">
-          <div className="mx-auto max-w-3xl text-center space-y-4">
+          <div className="mx-auto max-w-3xl text-center space-y-4" data-aos="fade-up">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Our Solutions</h2>
             <p className="text-foreground/70">
               Modular capabilities. Enterprise-grade delivery. Start focused, scale with confidence.
@@ -107,8 +107,9 @@ export default function Index() {
             ].map((solution, index) => (
               <div
                 key={solution.title}
-                className="group relative overflow-hidden rounded-2xl border border-border/40 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.05] hover:-translate-y-2 animate-fade-in-up"
-                style={{animationDelay: `${index * 100}ms`}}
+                className="group relative overflow-hidden rounded-2xl border border-border/40 bg-gradient-to-br from-background/80 to-background/60 p-6 shadow-sm backdrop-blur-sm transition-all duration-500 hover:border-primary/40 hover:shadow-lg hover:scale-[1.05] hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <div className="relative z-10">
@@ -132,7 +133,7 @@ export default function Index() {
       <section className="relative">
         <div className="container py-12 md:py-16">
           <div className="grid items-center gap-8 md:grid-cols-2">
-            <div className="space-y-4">
+            <div className="space-y-4" data-aos="fade-right">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Built for outcomes, not hype</h2>
               <p className="text-foreground/70">
                 We focus on shipping systems that make work faster, smarter, and safer—measured by your KPIs. From discovery to production, we align AI with your operating reality.
@@ -146,7 +147,7 @@ export default function Index() {
                 <Link to="/solutions" className="text-primary font-medium hover:text-primary/80 transition-colors duration-300 no-underline">Explore solutions</Link>
               </div>
             </div>
-            <div>
+            <div data-aos="fade-left">
               <div className="relative overflow-hidden rounded-2xl border border-border/60 bg-gradient-to-br from-primary/10 via-accent/10 to-background p-8 shadow-sm">
                 <div className="text-center">
                   <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
@@ -167,12 +168,12 @@ export default function Index() {
 
       <section className="border-t border-border/60 bg-muted/20">
         <div className="container py-12 md:py-16">
-          <div className="grid items-center gap-6 rounded-2xl border border-border/60 bg-background p-6 shadow-sm md:grid-cols-2">
-            <div className="space-y-3">
+          <div className="grid items-center gap-6 rounded-2xl border border-border/60 bg-background p-6 shadow-sm md:grid-cols-2" data-aos="fade-up">
+            <div className="space-y-3" data-aos="fade-right" data-aos-delay="200">
               <h3 className="text-2xl font-bold tracking-tight">Ready to aim AI at your goals?</h3>
               <p className="text-foreground/70">Share your objectives and constraints—we will propose a practical path that respects your reality.</p>
             </div>
-            <div className="md:text-right">
+            <div className="md:text-right" data-aos="fade-left" data-aos-delay="400">
               <DemoModal>
                 <Button className="h-11 px-6">Start a project</Button>
               </DemoModal>

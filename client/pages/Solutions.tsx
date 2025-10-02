@@ -12,8 +12,8 @@ export default function Solutions() {
           <div className="absolute -top-40 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-gradient-to-br from-primary/25 via-accent/20 to-transparent blur-3xl" />
         </div>
         <div className="container py-16 md:py-24 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight animate-fade-in-up px-4 sm:px-0">Solutions</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-foreground/70 animate-fade-in-up animation-delay-200 px-4 sm:px-0">One platform, myriad solutions. A modular ecosystem to accelerate innovation and scale outcomes across your org.</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight px-4 sm:px-0" data-aos="fade-up">Solutions</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-foreground/70 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200">One platform, myriad solutions. A modular ecosystem to accelerate innovation and scale outcomes across your org.</p>
         </div>
       </section>
 
@@ -44,7 +44,7 @@ export default function Solutions() {
             title: "Go-to-Market Speed",
             desc: "90-day delivery cycles that ship value, not just slides.",
           }].map(({icon:Icon, title, desc}, index) => (
-            <Card key={title} className="group border-border/60 bg-background/80 backdrop-blur animate-fade-in-up hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg" style={{animationDelay: `${index * 100}ms`}}>
+            <Card key={title} className="group border-border/60 bg-background/80 backdrop-blur hover:scale-105 hover:-translate-y-2 transition-all duration-500 hover:shadow-lg" data-aos="fade-up" data-aos-delay={index * 100}>
               <CardHeader>
                 <div className="h-10 w-10 rounded-md bg-gradient-to-br from-primary/80 to-accent/70 grid place-items-center text-white shadow group-hover:scale-110 transition-transform duration-300" aria-hidden>
                   <Icon className="h-5 w-5" />
@@ -58,10 +58,10 @@ export default function Solutions() {
       </section>
 
       <section className="container pb-20">
-        <div className="mx-auto max-w-6xl animate-fade-in-up">
+        <div className="mx-auto max-w-6xl" data-aos="fade-up">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Full Catalog</h2>
-            <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl" data-aos="fade-up" data-aos-delay="200">Full Catalog</h2>
+            <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">
               Comprehensive solutions across industries. From AI-powered platforms to enterprise software, we deliver the technology your business needs.
             </p>
           </div>
