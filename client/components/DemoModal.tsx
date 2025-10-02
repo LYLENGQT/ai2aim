@@ -13,6 +13,7 @@ interface DemoModalProps {
 
 export default function DemoModal({ children }: DemoModalProps) {
   const [open, setOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState("");
   const { toast } = useToast();
 
   function onSubmit(e: React.FormEvent) {
@@ -95,7 +96,7 @@ export default function DemoModal({ children }: DemoModalProps) {
             <div className="grid grid-cols-2 gap-3">
               <div className="grid gap-1">
                 <label className="text-xs font-medium">Country</label>
-                <Select>
+                <Select value={selectedCountry} onValueChange={setSelectedCountry}>
                   <SelectTrigger className="h-8 text-sm">
                     <SelectValue placeholder="Select country" />
                   </SelectTrigger>
@@ -114,6 +115,13 @@ export default function DemoModal({ children }: DemoModalProps) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
+                {selectedCountry === "other" && (
+                  <Input 
+                    placeholder="Enter your country" 
+                    className="h-8 text-sm mt-1" 
+                    required 
+                  />
+                )}
               </div>
               <div className="grid gap-1">
                 <label className="text-xs font-medium">Best Time to Call*</label>
