@@ -1,28 +1,36 @@
 import { Button } from "./ui/button";
 import { MessageCircle } from "lucide-react";
+import { useSidebar } from "../contexts/SidebarContext";
 
 interface ChatButtonProps {
   children?: React.ReactNode;
   variant?: "default" | "outline" | "ghost";
   size?: "sm" | "default" | "lg";
   className?: string;
+  onClick?: () => void;
 }
 
 export default function ChatButton({ 
   children, 
   variant = "default", 
   size = "default",
-  className 
+  className,
+  onClick
 }: ChatButtonProps) {
-  const openChat = () => {
-    if (window.chatbase) {
-      window.chatbase("open");
+  const { openSidebar } = useSidebar();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      // Default behavior - open sidebar
+      openSidebar();
     }
   };
 
   return (
     <Button
-      onClick={openChat}
+      onClick={handleClick}
       variant={variant}
       size={size}
       className={className}

@@ -4,8 +4,13 @@ import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 import DemoModal from "./DemoModal";
+import ChatButton from "./ChatButton";
 
-export default function SiteHeader() {
+interface SiteHeaderProps {
+  onOpenChat?: () => void;
+}
+
+export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `px-3 py-3 text-sm font-medium transition-all duration-300 hover:scale-105 transform rounded-md ${
@@ -14,16 +19,20 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-          <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-md bg-gradient-to-br from-primary to-accent animate-gradient" />
-          <span className="text-base sm:text-lg font-extrabold tracking-tight">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-gradient">Ai2</span>
-            <span>Aim</span>
-          </span>
-        </Link>
+      <div className="container flex h-16 items-center">
+        {/* Logo - Left */}
+        <div className="flex-1">
+          <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+            <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-md bg-gradient-to-br from-primary to-accent animate-gradient" />
+            <span className="text-base sm:text-lg font-extrabold tracking-tight">
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-gradient">Ai2</span>
+              <span>Aim</span>
+            </span>
+          </Link>
+        </div>
 
-        <nav className="hidden md:flex items-center gap-1">
+        {/* Navigation - Center */}
+        <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
           <NavLink to="/" className={navLinkClass} end>
             Home
           </NavLink>
@@ -38,8 +47,12 @@ export default function SiteHeader() {
           </NavLink>
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        {/* Buttons - Right */}
+        <div className="hidden md:flex items-center gap-3 flex-1 justify-end">
           <ThemeToggle />
+          <ChatButton variant="outline" size="sm" onClick={onOpenChat}>
+            Ask AimBot
+          </ChatButton>
           <DemoModal>
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_-10px_hsl(var(--primary))]">
               Schedule a demo
@@ -47,6 +60,7 @@ export default function SiteHeader() {
           </DemoModal>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden inline-flex items-center justify-center rounded-md border border-border/60 p-2 hover:bg-muted/50 transition-colors duration-200"
           aria-label="Toggle menu"
@@ -114,8 +128,11 @@ export default function SiteHeader() {
             <div className={`transform transition-all duration-500 ease-out ${
               open ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
             }`} style={{transitionDelay: open ? '350ms' : '0ms'}}>
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-3">
                 <ThemeToggle />
+                <ChatButton variant="outline" size="sm" onClick={() => { setOpen(false); onOpenChat?.(); }}>
+                  Ask AimBot
+                </ChatButton>
                 <DemoModal>
                   <Button size="sm" className="px-4" onClick={() => setOpen(false)}>Schedule a demo</Button>
                 </DemoModal>

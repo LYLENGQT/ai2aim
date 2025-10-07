@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteLayout from "../components/SiteLayout";
 import { Button } from "../components/ui/button";
-import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import DemoModal from "../components/DemoModal";
 import ChatButton from "../components/ChatButton";
 
@@ -51,11 +51,6 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="fixed right-4 top-1/3 hidden flex-col items-center gap-2 rounded-full border border-border/60 bg-background/80 p-2 shadow-sm md:flex">
-          <a href="https://ca.linkedin.com/company/ai2aim" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rounded-md p-2 text-foreground/70 hover:text-foreground">
-            <Linkedin className="h-4 w-4" />
-          </a>
-        </div>
       </section>
 
       <section id="solutions" className="border-t border-border/60 bg-muted/20">
