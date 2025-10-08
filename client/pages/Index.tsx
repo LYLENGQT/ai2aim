@@ -40,9 +40,24 @@ export default function Index() {
             <div className="grid place-items-center" data-aos="fade-up" data-aos-delay="800">
               <div className="flex items-center gap-2 text-sm text-foreground/60">
                 <div className="flex -space-x-2">
-                  <span className="h-7 w-7 rounded-full border border-white/70 bg-gradient-to-br from-primary/70 to-accent/70 animate-bounce" style={{animationDelay: '0s'}} />
-                  <span className="h-7 w-7 rounded-full border border-white/70 bg-gradient-to-br from-accent/70 to-primary/70 animate-bounce" style={{animationDelay: '0.2s'}} />
-                  <span className="h-7 w-7 rounded-full border border-white/70 bg-gradient-to-br from-primary/70 to-accent/70 animate-bounce" style={{animationDelay: '0.4s'}} />
+                  <div className="h-7 w-7 rounded-full border border-white/70 bg-white shadow-sm flex items-center justify-center animate-bounce overflow-hidden" style={{animationDelay: '0s'}}>
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#00D4AA" strokeWidth="2" fill="none"/>
+                    </svg>
+                  </div>
+                  <div className="h-7 w-7 rounded-full border border-white/70 bg-white shadow-sm flex items-center justify-center animate-bounce overflow-hidden" style={{animationDelay: '0.2s'}}>
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <circle cx="12" cy="12" r="10" fill="#8B5CF6"/>
+                      <path d="M8 12h8M12 8v8" stroke="white" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                  <div className="h-7 w-7 rounded-full border border-white/70 bg-white shadow-sm flex items-center justify-center animate-bounce overflow-hidden" style={{animationDelay: '0.4s'}}>
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                      <rect x="3" y="3" width="18" height="18" rx="3" fill="#F59E0B"/>
+                      <path d="M9 9h6v6H9z" fill="white"/>
+                      <circle cx="12" cy="12" r="2" fill="#F59E0B"/>
+                    </svg>
+                  </div>
                 </div>
                 <span>
                 Trusted by businesses seeking practical AI solutions</span>

@@ -19,11 +19,15 @@ export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border/60">
-      <div className="container flex h-16 items-center">
+      <div className="container relative flex h-16 items-center px-10">
         {/* Logo - Left */}
-        <div className="flex-1">
+        <div className="flex-shrink-0 ml-4">
           <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-            <div className="h-6 w-6 sm:h-7 sm:w-7 rounded-md bg-gradient-to-br from-primary to-accent animate-gradient" />
+            <img 
+              src="/logo.png" 
+              alt="Ai2Aim Logo" 
+              className="h-10 w-10 sm:h-11 sm:w-11 object-contain"
+            />
             <span className="text-base sm:text-lg font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent animate-gradient">Ai2</span>
               <span>Aim</span>
@@ -31,8 +35,8 @@ export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
           </Link>
         </div>
 
-        {/* Navigation - Center */}
-        <nav className="hidden md:flex items-center gap-1 flex-1 justify-center">
+        {/* Navigation - Absolute Center */}
+        <nav className="hidden md:flex items-center gap-1 absolute left-1/2 transform -translate-x-1/2">
           <NavLink to="/" className={navLinkClass} end>
             Home
           </NavLink>
@@ -48,7 +52,7 @@ export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
         </nav>
 
         {/* Buttons - Right */}
-        <div className="hidden md:flex items-center gap-3 flex-1 justify-end">
+        <div className="hidden md:flex items-center gap-3 ml-auto">
           <ThemeToggle />
           <ChatButton variant="outline" size="sm" onClick={onOpenChat}>
             Ask AimBot
