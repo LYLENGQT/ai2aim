@@ -12,6 +12,7 @@ import { MapPin, Clock, Users, DollarSign, Briefcase, Search, Filter, ExternalLi
 import LoadingSpinner from "../components/LoadingSpinner";
 import AOS from "aos";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { getApiUrl } from "../config/api";
 
 interface JobPosting {
   id: string;
@@ -131,7 +132,7 @@ export default function JobPostingsSimple() {
       }
       
       const queryString = queryParams.toString();
-      const url = queryString ? `/api/public/jobs?${queryString}` : '/api/public/jobs';
+      const url = queryString ? getApiUrl(`public/jobs?${queryString}`) : getApiUrl('public/jobs');
       
       // Use the public API endpoint
       const response = await fetch(url);

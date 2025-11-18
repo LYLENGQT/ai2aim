@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { MapPin, Clock, Users, DollarSign, Briefcase, Search, Filter } from "lucide-react";
 import { JobPosting, JobPostingsResponse } from "@shared/api";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { getApiUrl } from "../config/api";
 
 export default function JobPostings() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function JobPostings() {
   const fetchJobPostings = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/public/jobs');
+      const response = await fetch(getApiUrl('public/jobs'));
       
       if (!response.ok) {
         throw new Error('Failed to fetch job postings');

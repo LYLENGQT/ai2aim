@@ -9,6 +9,7 @@ import { useToast } from "../components/ui/use-toast";
 import LoadingSpinner from "../components/LoadingSpinner";
 import SiteLayout from "../components/SiteLayout";
 import { useAuth } from "../contexts/AuthContext";
+import { getApiUrl } from "../config/api";
 
 export default function JobDetails() {
   const { jobId } = useParams<{ jobId: string }>();
@@ -30,7 +31,7 @@ export default function JobDetails() {
     try {
       setLoading(true);
       // Fetch the specific job from the public API (no authentication required)
-      const response = await fetch(`/api/public/jobs/${jobId}`, {
+      const response = await fetch(getApiUrl(`public/jobs/${jobId}`), {
         headers: {
           'Content-Type': 'application/json'
         }

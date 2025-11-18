@@ -9,10 +9,11 @@ import { Badge } from "../components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Progress } from "../components/ui/progress";
 import { X, Plus, Trash2, MapPin, Clock, Users, ArrowLeft, ArrowRight, Check, Upload } from "lucide-react";
-import { JobPosting, JobApplication, JobApplicationResponse } from "@shared/api";
+import { JobPosting, JobApplicationResponse } from "@shared/api";
 import { useToast } from "../components/ui/use-toast";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useAuth } from "../contexts/AuthContext";
+import { getApiUrl } from "../config/api";
 
 interface WorkExperience {
   id: string;
@@ -90,7 +91,7 @@ export default function JobApplication() {
   const fetchJobDetails = async () => {
     try {
       // Fetch the specific job from the public API (no authentication required)
-      const response = await fetch(`/api/public/jobs/${jobId}`, {
+      const response = await fetch(getApiUrl(`public/jobs/${jobId}`), {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -311,7 +312,7 @@ export default function JobApplication() {
       }
 
       // Submit the application using the public API endpoint
-      const response = await fetch(`/api/public/jobs/${job.id}/apply`, {
+      const response = await fetch(getApiUrl(`public/jobs/${job.id}/apply`), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
