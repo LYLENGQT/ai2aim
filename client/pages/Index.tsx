@@ -33,9 +33,14 @@ export default function Index() {
                   <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Button>
               </DemoModal>
-              <a href="#solutions" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
-                See solutions
-              </a>
+              <div className="flex gap-4">
+                <a href="#solutions" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
+                  See solutions
+                </a>
+                <Link to="/jobs" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors duration-300 no-underline">
+                  View jobs
+                </Link>
+              </div>
             </div>
             <div className="grid place-items-center" data-aos="fade-up" data-aos-delay="800">
               <div className="flex items-center gap-2 text-sm text-foreground/60">
@@ -193,6 +198,25 @@ export default function Index() {
                   Ask AimBot
                 </ChatButton>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border/60">
+        <div className="container py-12 md:py-16">
+          <div className="grid items-center gap-6 rounded-2xl border border-border/60 bg-gradient-to-br from-primary/5 via-accent/5 to-background p-6 shadow-sm md:grid-cols-2" data-aos="fade-up">
+            <div className="space-y-3" data-aos="fade-right" data-aos-delay="200">
+              <h3 className="text-2xl font-bold tracking-tight">Join Our Team</h3>
+              <p className="text-foreground/70">We're always looking for talented individuals who share our passion for building practical AI solutions. Explore our open positions and be part of the future.</p>
+            </div>
+            <div className="md:text-right" data-aos="fade-left" data-aos-delay="400">
+              <Link to="/jobs">
+                <Button className="h-11 px-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90">
+                  View Open Positions
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

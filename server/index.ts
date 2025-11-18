@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleJobPostings, handleJobDetails, handleJobApplication } from "./routes/job-postings";
 
 export function createServer() {
   const app = express();
@@ -18,6 +19,11 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Public job postings routes
+  app.get("/api/public/jobs", handleJobPostings);
+  app.get("/api/public/jobs/:jobPostingId", handleJobDetails);
+  app.post("/api/public/jobs/:jobPostingId/apply", handleJobApplication);
 
   return app;
 }
