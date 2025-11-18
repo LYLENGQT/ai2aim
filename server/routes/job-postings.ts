@@ -1,7 +1,7 @@
 import { RequestHandler } from "express";
 
 // Backend API base URL - can be configured via environment variable
-const BACKEND_API_URL = process.env.BACKEND_API_URL || 'http://localhost:3001/api/v1';
+const BACKEND_API_URL = process.env.BACKEND_API_URL || 'https://pwgfmn7vlwj6sz7vcwxh7nrjpy0hfekw.lambda-url.ca-central-1.on.aws/api/v1';
 
 // GET /api/public/jobs - List all public job postings (no authentication required)
 export const handleJobPostings: RequestHandler = async (req, res) => {
