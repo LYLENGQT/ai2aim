@@ -1,6 +1,9 @@
 import { RequestHandler } from "express";
 
-const BACKEND_API_URL = process.env.BACKEND_API_URL || 'https://pwgfmn7vlwj6sz7vcwxh7nrjpy0hfekw.lambda-url.ca-central-1.on.aws/api/v1';
+const BACKEND_API_URL = process.env.BACKEND_API_URL;
+if (!BACKEND_API_URL) {
+  throw new Error('BACKEND_API_URL environment variable is required');
+}
 export const handleJobPostings: RequestHandler = async (req, res) => {
   try {
     const queryParams = new URLSearchParams();
