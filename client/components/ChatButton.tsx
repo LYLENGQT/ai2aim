@@ -23,7 +23,6 @@ export default function ChatButton({
     if (onClick) {
       onClick();
     } else {
-      // Default behavior - open sidebar
       openSidebar();
     }
   };
@@ -38,7 +37,7 @@ export default function ChatButton({
       {children || (
         <>
           <MessageCircle className="mr-2 h-4 w-4" />
-          Chat with AimBot
+          Get Help
         </>
       )}
     </Button>

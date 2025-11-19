@@ -143,6 +143,15 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
       return;
     }
 
+    if (!formData.resumeUrl || formData.resumeUrl.trim().length === 0) {
+      toast({
+        title: "Resume Required",
+        description: "Please provide your resume URL before submitting your application.",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -339,7 +348,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                   id="expectedSalary"
                   value={formData.expectedSalary}
                   onChange={(e) => handleInputChange("expectedSalary", e.target.value)}
-                  placeholder="e.g., 50000"
+                  placeholder="50000"
                 />
               </div>
             </div>
@@ -475,7 +484,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                       <Input
                         value={edu.degree}
                         onChange={(e) => updateEducationEntry(edu.id, "degree", e.target.value)}
-                        placeholder="e.g., Bachelor's, Master's"
+                        placeholder="Bachelor's, Master's"
                       />
                     </div>
                     <div>
@@ -483,7 +492,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                       <Input
                         value={edu.field}
                         onChange={(e) => updateEducationEntry(edu.id, "field", e.target.value)}
-                        placeholder="e.g., Computer Science"
+                        placeholder="Computer Science"
                       />
                     </div>
                     <div>
@@ -491,7 +500,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                       <Input
                         value={edu.graduationYear}
                         onChange={(e) => updateEducationEntry(edu.id, "graduationYear", e.target.value)}
-                        placeholder="e.g., 2020"
+                        placeholder="2020"
                       />
                     </div>
                   </div>
@@ -556,12 +565,13 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
 
           {/* Resume URL */}
           <div>
-            <Label htmlFor="resumeUrl">Resume URL</Label>
+            <Label htmlFor="resumeUrl">Resume URL *</Label>
             <Input
               id="resumeUrl"
               value={formData.resumeUrl}
               onChange={(e) => handleInputChange("resumeUrl", e.target.value)}
-              placeholder="https://example.com/resume.pdf"
+              placeholder="Resume URL"
+              required
             />
             <p className="text-sm text-foreground/70 mt-1">
               Please upload your resume to a cloud service and provide the URL

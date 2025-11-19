@@ -12,7 +12,6 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
 
   useEffect(() => {
     if (isOpen) {
-      // Delay to allow for smooth animation
       const timer = setTimeout(() => setIsVisible(true), 100);
       return () => clearTimeout(timer);
     } else {
@@ -21,7 +20,6 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
   }, [isOpen]);
 
   const openChat = () => {
-    // Trigger Chatbase widget
     if (window.chatbase) {
       window.chatbase("open");
     }
@@ -51,10 +49,9 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
             <MessageCircle className="h-8 w-8 text-white" />
           </div>
           
-          <h2 className="mb-2 text-2xl font-bold">Hi there! 👋</h2>
+          <h2 className="mb-2 text-2xl font-bold">Need Help?</h2>
           <p className="mb-6 text-foreground/70">
-            I'm <span className="font-semibold text-primary">AimBot</span>, your AI assistant. 
-            I can help you learn about our AI solutions, schedule a demo, or answer any questions!
+            Our team is here to answer your questions about our solutions, schedule a consultation, or help you get started.
           </p>
           
           <div className="space-y-3">
@@ -62,7 +59,7 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
               onClick={openChat}
               className="w-full h-12 text-base font-medium"
             >
-              Start Chatting with AimBot
+              Start Conversation
             </Button>
             
             <Button 
@@ -70,12 +67,12 @@ export default function ChatModal({ isOpen, onClose }: ChatModalProps) {
               onClick={onClose}
               className="w-full"
             >
-              Maybe Later
+              Close
             </Button>
           </div>
           
           <p className="mt-4 text-xs text-foreground/50">
-            You can also find me in the chat bubble at any time
+            Available 24/7 via chat
           </p>
         </div>
       </div>

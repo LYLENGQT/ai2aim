@@ -200,7 +200,6 @@ export default function JobPostingsSimple() {
   };
 
   const handleQuickApply = (job: JobPosting) => {
-    // TODO: Implement LinkedIn OAuth
     alert(`Quick Apply with LinkedIn for ${job.title} - Coming Soon!`);
   };
 

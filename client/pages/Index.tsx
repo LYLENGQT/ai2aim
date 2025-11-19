@@ -195,7 +195,7 @@ export default function Index() {
                   <Button className="h-11 px-6">Schedule a Demo</Button>
                 </DemoModal>
                 <ChatButton variant="outline" className="h-11 px-6">
-                  Ask AimBot
+                  Get Help
                 </ChatButton>
               </div>
             </div>

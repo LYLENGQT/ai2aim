@@ -15,8 +15,6 @@ import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import JobPostings from "./pages/JobPostings";
-import JobPostingsTest from "./pages/JobPostingsTest";
-import JobPostingsMinimal from "./pages/JobPostingsMinimal";
 import JobPostingsSimple from "./pages/JobPostingsSimple";
 import JobDetails from "./pages/JobDetails";
 import JobApplication from "./pages/JobApplication";

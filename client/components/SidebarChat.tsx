@@ -21,8 +21,8 @@ export default function SidebarChat({ isOpen, onClose }: SidebarChatProps) {
                 <MessageCircle className="h-4 w-4 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">AimBot Assistant</h3>
-                <p className="text-xs text-foreground/60">AI-powered help</p>
+                <h3 className="font-semibold text-foreground">Support</h3>
+                <p className="text-xs text-foreground/60">Get assistance</p>
               </div>
             </div>
             <Button

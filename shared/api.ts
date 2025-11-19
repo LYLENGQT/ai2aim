@@ -1,19 +1,3 @@
-/**
- * Shared code between client and server
- * Useful to share types between client and server
- * and/or small pure JS functions that can be used on both client and server
- */
-
-/**
- * Example response type for /api/demo
- */
-export interface DemoResponse {
-  message: string;
-}
-
-/**
- * Job Posting types - Updated to match public API structure
- */
 export interface JobPosting {
   id: string;
   organizationId: string;
@@ -46,9 +30,6 @@ export interface JobPostingsResponse {
   };
 }
 
-/**
- * Job Application types - Updated to match public API structure
- */
 export interface JobApplication {
   phone?: string;
   professionalSummary?: string;
@@ -75,9 +56,6 @@ export interface JobApplicationResponse {
   message: string;
 }
 
-/**
- * Candidate Registration types
- */
 export interface CandidateRegistrationRequest {
   email: string;
   password: string;

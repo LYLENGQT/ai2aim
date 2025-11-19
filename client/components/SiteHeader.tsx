@@ -106,7 +106,7 @@ export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
           ) : (
             <>
               <ChatButton variant="outline" size="sm" onClick={onOpenChat}>
-                Ask AimBot
+                Get Help
               </ChatButton>
               <DemoModal>
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_-10px_hsl(var(--primary))]">
@@ -208,7 +208,7 @@ export default function SiteHeader({ onOpenChat }: SiteHeaderProps) {
               <div className="flex items-center justify-center gap-3">
                 <ThemeToggle />
                 <ChatButton variant="outline" size="sm" onClick={() => { setOpen(false); onOpenChat?.(); }}>
-                  Ask AimBot
+                  Get Help
                 </ChatButton>
                 <DemoModal>
                   <Button size="sm" className="px-4" onClick={() => setOpen(false)}>Schedule a demo</Button>

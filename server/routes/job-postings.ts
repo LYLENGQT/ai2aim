@@ -1,12 +1,8 @@
 import { RequestHandler } from "express";
 
-// Backend API base URL - can be configured via environment variable
 const BACKEND_API_URL = process.env.BACKEND_API_URL || 'https://pwgfmn7vlwj6sz7vcwxh7nrjpy0hfekw.lambda-url.ca-central-1.on.aws/api/v1';
-
-// GET /api/public/jobs - List all public job postings (no authentication required)
 export const handleJobPostings: RequestHandler = async (req, res) => {
   try {
-    // Build query parameters for the public API
     const queryParams = new URLSearchParams();
     const { 
       search, 
@@ -20,7 +16,6 @@ export const handleJobPostings: RequestHandler = async (req, res) => {
       limit
     } = req.query;
 
-    // Valid sortBy options for job postings
     const validSortByOptions = ['title', 'createdAt', 'applicationDeadline'];
     
     if (search) queryParams.append('search', search as string);
@@ -29,18 +24,14 @@ export const handleJobPostings: RequestHandler = async (req, res) => {
     if (seniorityLevel) queryParams.append('seniorityLevel', seniorityLevel as string);
     if (location) queryParams.append('location', location as string);
     
-    // Only append sortBy if it's a valid option (prevents using firstName or other invalid fields)
     if (sortBy && validSortByOptions.includes(sortBy as string)) {
       queryParams.append('sortBy', sortBy as string);
-      // Default to ASC if sortOrder not provided, otherwise use the provided value
       const order = sortOrder || 'asc';
       queryParams.append('sortOrder', order as string);
     }
     
     if (page) queryParams.append('page', page as string);
     if (limit) queryParams.append('limit', limit as string);
-
-    // Fetch job postings from public API (no authentication required)
     const jobPostingsResponse = await fetch(`${BACKEND_API_URL}/public/jobs?${queryParams.toString()}`, {
       headers: {
         'Content-Type': 'application/json'
@@ -87,7 +78,6 @@ export const handleJobDetails: RequestHandler = async (req, res) => {
       });
     }
 
-    // Fetch job details from public API (no authentication required)
     const jobDetailsResponse = await fetch(`${BACKEND_API_URL}/public/jobs/${jobPostingId}`, {
       headers: {
         'Content-Type': 'application/json'
@@ -147,7 +137,6 @@ export const handleJobApplication: RequestHandler = async (req, res) => {
       });
     }
     
-    // Submit the application using the public API endpoint with authentication
     const applicationResponse = await fetch(`${BACKEND_API_URL}/public/jobs/${jobPostingId}/apply`, {
       method: 'POST',
       headers: {

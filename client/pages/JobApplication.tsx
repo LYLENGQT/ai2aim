@@ -134,7 +134,7 @@ export default function JobApplication() {
     if (field === "resumeUrl") {
       const url = value as string;
       if (url && !validateUrl(url)) {
-        setResumeUrlError("Please enter a valid URL (e.g., https://example.com/resume.pdf)");
+        setResumeUrlError("Please enter a valid URL");
       } else {
         setResumeUrlError("");
       }
@@ -208,7 +208,7 @@ export default function JobApplication() {
         setNewCertification("");
         setCertificationUrlError("");
       } else {
-        setCertificationUrlError("Please enter a valid certificate URL (e.g., https://example.com/certificate.pdf)");
+        setCertificationUrlError("Please enter a valid certificate URL");
       }
     }
   };
@@ -241,9 +241,9 @@ export default function JobApplication() {
       case 4:
         return true; // Education is optional
       case 5:
-        return !resumeUrlError && !certificationUrlError; // Skills are optional, but URLs must be valid if provided
+        return formData.resumeUrl.trim().length > 0 && !resumeUrlError && !certificationUrlError;
       case 6:
-        return !resumeUrlError && !certificationUrlError; // Review step - ensure URLs are still valid
+        return formData.resumeUrl.trim().length > 0 && !resumeUrlError && !certificationUrlError;
       default:
         return false;
     }
@@ -253,6 +253,15 @@ export default function JobApplication() {
     if (!job) return;
     
     // Final validation before submission
+    if (!formData.resumeUrl || formData.resumeUrl.trim().length === 0) {
+      toast({
+        title: "Resume Required",
+        description: "Please provide your resume URL before submitting your application.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     if (resumeUrlError || certificationUrlError) {
       toast({
         title: "Invalid URLs",
@@ -288,7 +297,7 @@ export default function JobApplication() {
       // Optional fields from form
       if (formData.phone) applicationData.phone = formData.phone;
       if (formData.professionalSummary) applicationData.professionalSummary = formData.professionalSummary;
-      if (formData.resumeUrl) applicationData.resumeUrl = formData.resumeUrl;
+      applicationData.resumeUrl = formData.resumeUrl;
       if (formData.totalExperienceYears && formData.totalExperienceYears > 0) applicationData.totalExperienceYears = formData.totalExperienceYears;
       if (certificationEntries.length > 0) applicationData.certificationEntries = certificationEntries;
       if (skills.length > 0) applicationData.skills = skills;
@@ -566,7 +575,7 @@ export default function JobApplication() {
                           id="expectedSalary"
                           value={formData.expectedSalary}
                           onChange={(e) => handleInputChange("expectedSalary", e.target.value)}
-                          placeholder="e.g., 50000"
+                          placeholder="50000"
                         />
                       </div>
                     </div>
@@ -728,7 +737,7 @@ export default function JobApplication() {
                               <Input
                                 value={edu.degree}
                                 onChange={(e) => updateEducationEntry(edu.id, "degree", e.target.value)}
-                                placeholder="e.g., Bachelor's, Master's"
+                                placeholder="Bachelor's, Master's"
                               />
                             </div>
                             <div>
@@ -736,7 +745,7 @@ export default function JobApplication() {
                               <Input
                                 value={edu.field}
                                 onChange={(e) => updateEducationEntry(edu.id, "field", e.target.value)}
-                                placeholder="e.g., Computer Science"
+                                placeholder="Computer Science"
                               />
                             </div>
                             <div>
@@ -744,7 +753,7 @@ export default function JobApplication() {
                               <Input
                                 value={edu.graduationYear}
                                 onChange={(e) => updateEducationEntry(edu.id, "graduationYear", e.target.value)}
-                                placeholder="e.g., 2020"
+                                placeholder="2020"
                               />
                             </div>
                           </div>
@@ -801,7 +810,7 @@ export default function JobApplication() {
                         <Input
                           value={newCertification}
                           onChange={(e) => setNewCertification(e.target.value)}
-                          placeholder="https://example.com/certificate.pdf"
+                          placeholder="Certificate URL"
                           onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addCertification())}
                           className={certificationUrlError ? "border-red-500 focus:border-red-500" : ""}
                         />
@@ -831,19 +840,20 @@ export default function JobApplication() {
                     <div>
                       <h3 className="text-lg font-semibold mb-4">Resume</h3>
                       <div>
-                        <Label htmlFor="resumeUrl">Resume URL (Optional)</Label>
+                        <Label htmlFor="resumeUrl">Resume URL *</Label>
                         <Input
                           id="resumeUrl"
                           value={formData.resumeUrl}
                           onChange={(e) => handleInputChange("resumeUrl", e.target.value)}
-                          placeholder="https://example.com/resume.pdf"
+                          placeholder="Resume URL"
+                          required
                           className={resumeUrlError ? "border-red-500 focus:border-red-500" : ""}
                         />
                         {resumeUrlError ? (
                           <p className="text-sm text-red-500 mt-1">{resumeUrlError}</p>
                         ) : (
                           <p className="text-sm text-muted-foreground mt-1">
-                            Please upload your resume to a cloud service and provide the URL (e.g., Google Drive, Dropbox, etc.)
+                            Please upload your resume to a cloud service and provide the URL
                           </p>
                         )}
                       </div>
@@ -960,24 +970,27 @@ export default function JobApplication() {
                       )}
 
                       {/* Resume Review */}
-                      {formData.resumeUrl && (
-                        <div className="border rounded-lg p-6">
-                          <h3 className="text-lg font-semibold mb-4">Resume</h3>
-                          {resumeUrlError ? (
-                            <div className="flex items-center gap-2 text-red-500">
-                              <Upload className="h-4 w-4" />
-                              <span className="text-sm">Invalid URL - Please fix in Step 5</span>
-                            </div>
-                          ) : (
-                            <div className="flex items-center gap-2">
-                              <Upload className="h-4 w-4" />
-                              <a href={formData.resumeUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                                View Resume
-                              </a>
-                            </div>
-                          )}
-                        </div>
-                      )}
+                      <div className="border rounded-lg p-6">
+                        <h3 className="text-lg font-semibold mb-4">Resume</h3>
+                        {!formData.resumeUrl || formData.resumeUrl.trim().length === 0 ? (
+                          <div className="flex items-center gap-2 text-red-500">
+                            <Upload className="h-4 w-4" />
+                            <span className="text-sm">Resume URL is required - Please add in Step 5</span>
+                          </div>
+                        ) : resumeUrlError ? (
+                          <div className="flex items-center gap-2 text-red-500">
+                            <Upload className="h-4 w-4" />
+                            <span className="text-sm">Invalid URL - Please fix in Step 5</span>
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-2">
+                            <Upload className="h-4 w-4" />
+                            <a href={formData.resumeUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                              View Resume
+                            </a>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 )}

@@ -64,10 +64,10 @@ export default function Auth() {
       
       // Store user data and access token
       login({
-        id: data.user.id || "demo-user-id",
+        id: data.user.id || "",
         email: data.user.email || loginData.email,
-        firstName: data.user.firstName || "Demo",
-        lastName: data.user.lastName || "Candidate"
+        firstName: data.user.firstName || "",
+        lastName: data.user.lastName || ""
       }, data.tokens.accessToken);
       
       toast({
@@ -336,14 +336,6 @@ export default function Auth() {
                     </Button>
                   </form>
                   
-                  {/* Demo Credentials - Login Only */}
-                  <div className="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
-                    <h3 className="text-base font-semibold text-blue-900 mb-3">Demo Credentials</h3>
-                    <div className="text-sm text-blue-800 space-y-2">
-                      <p><strong>Email:</strong> candidate2.demo@ems-enterprise.com</p>
-                      <p><strong>Password:</strong> Candidate@123</p>
-                    </div>
-                  </div>
                 </div>
 
                 <div className={`absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out ${activeTab === 'signup' ? 'translate-x-0' : 'translate-x-full'}`}>

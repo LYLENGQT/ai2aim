@@ -5,6 +5,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { JobPosting } from "@shared/api";
+import { useToast } from "../hooks/use-toast";
 
 interface JobApplicationModalProps {
   job: JobPosting;
@@ -13,6 +14,7 @@ interface JobApplicationModalProps {
 }
 
 export default function JobApplicationModalSimple({ job, isOpen, onClose }: JobApplicationModalProps) {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,7 +34,20 @@ export default function JobApplicationModalSimple({ job, isOpen, onClose }: JobA
     e.preventDefault();
     
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone) {
-      alert("Please fill in all required fields.");
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (!formData.resumeUrl || formData.resumeUrl.trim().length === 0) {
+      toast({
+        title: "Resume Required",
+        description: "Please provide your resume URL before submitting your application.",
+        variant: "destructive"
+      });
       return;
     }
 
@@ -145,7 +160,7 @@ export default function JobApplicationModalSimple({ job, isOpen, onClose }: JobA
                   id="expectedSalary"
                   value={formData.expectedSalary}
                   onChange={(e) => handleInputChange("expectedSalary", e.target.value)}
-                  placeholder="e.g., 50000"
+                  placeholder="50000"
                 />
               </div>
             </div>
@@ -165,12 +180,13 @@ export default function JobApplicationModalSimple({ job, isOpen, onClose }: JobA
 
           {/* Resume URL */}
           <div>
-            <Label htmlFor="resumeUrl">Resume URL</Label>
+            <Label htmlFor="resumeUrl">Resume URL *</Label>
             <Input
               id="resumeUrl"
               value={formData.resumeUrl}
               onChange={(e) => handleInputChange("resumeUrl", e.target.value)}
-              placeholder="https://example.com/resume.pdf"
+              placeholder="Resume URL"
+              required
             />
             <p className="text-sm text-foreground/70 mt-1">
               Please upload your resume to a cloud service and provide the URL
