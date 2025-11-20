@@ -60,7 +60,8 @@ export default function JobApplication() {
     resumeUrl: "",
     totalExperienceYears: 0,
     expectedSalary: "",
-    country: "Philippines"
+    salaryCurrency: "USD",
+    country: "United States"
   });
   
   const [workExperience, setWorkExperience] = useState<WorkExperience[]>([]);
@@ -301,7 +302,9 @@ export default function JobApplication() {
       if (formData.totalExperienceYears && formData.totalExperienceYears > 0) applicationData.totalExperienceYears = formData.totalExperienceYears;
       if (certificationEntries.length > 0) applicationData.certificationEntries = certificationEntries;
       if (skills.length > 0) applicationData.skills = skills;
-      if (formData.expectedSalary) applicationData.expectedSalary = formData.expectedSalary;
+      if (formData.expectedSalary) {
+        applicationData.expectedSalary = `${formData.expectedSalary} ${formData.salaryCurrency}`;
+      }
       if (formData.country) applicationData.country = formData.country;
 
       console.log('Sending application data:', applicationData);
@@ -320,8 +323,8 @@ export default function JobApplication() {
         return;
       }
 
-      // Submit the application using the public API endpoint
-      const response = await fetch(getApiUrl(`public/jobs/${job.id}/apply`), {
+      // Submit the application through the Express proxy (uses env BACKEND_API_URL)
+      const response = await fetch(`/api/public/jobs/${job.id}/apply`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
@@ -563,20 +566,59 @@ export default function JobApplication() {
                       </div>
                       <div>
                         <Label htmlFor="country">Country</Label>
-                        <Input
-                          id="country"
-                          value={formData.country}
-                          onChange={(e) => handleInputChange("country", e.target.value)}
-                        />
+                        <Select value={formData.country} onValueChange={(value) => handleInputChange("country", value)}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select country" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="United States">United States</SelectItem>
+                            <SelectItem value="Canada">Canada</SelectItem>
+                            <SelectItem value="United Kingdom">United Kingdom</SelectItem>
+                            <SelectItem value="Australia">Australia</SelectItem>
+                            <SelectItem value="Germany">Germany</SelectItem>
+                            <SelectItem value="France">France</SelectItem>
+                            <SelectItem value="Japan">Japan</SelectItem>
+                            <SelectItem value="India">India</SelectItem>
+                            <SelectItem value="China">China</SelectItem>
+                            <SelectItem value="Brazil">Brazil</SelectItem>
+                            <SelectItem value="Mexico">Mexico</SelectItem>
+                            <SelectItem value="Philippines">Philippines</SelectItem>
+                            <SelectItem value="Singapore">Singapore</SelectItem>
+                            <SelectItem value="South Korea">South Korea</SelectItem>
+                            <SelectItem value="Netherlands">Netherlands</SelectItem>
+                            <SelectItem value="Sweden">Sweden</SelectItem>
+                            <SelectItem value="Switzerland">Switzerland</SelectItem>
+                            <SelectItem value="Spain">Spain</SelectItem>
+                            <SelectItem value="Italy">Italy</SelectItem>
+                            <SelectItem value="Other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
                       </div>
-                      <div>
-                        <Label htmlFor="expectedSalary">Expected Salary</Label>
-                        <Input
-                          id="expectedSalary"
-                          value={formData.expectedSalary}
-                          onChange={(e) => handleInputChange("expectedSalary", e.target.value)}
-                          placeholder="50000"
-                        />
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="col-span-2">
+                          <Label htmlFor="expectedSalary">Expected Salary</Label>
+                          <Input
+                            id="expectedSalary"
+                            type="number"
+                            min="0"
+                            step="1000"
+                            value={formData.expectedSalary}
+                            onChange={(e) => handleInputChange("expectedSalary", e.target.value)}
+                            placeholder="50000"
+                          />
+                        </div>
+                        <div>
+                          <Label htmlFor="salaryCurrency">Currency</Label>
+                          <Select value={formData.salaryCurrency} onValueChange={(value) => handleInputChange("salaryCurrency", value)}>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="USD">USD</SelectItem>
+                              <SelectItem value="CAD">CAD</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -887,7 +929,7 @@ export default function JobApplication() {
                             <span className="font-medium">Country:</span> {formData.country}
                           </div>
                           <div>
-                            <span className="font-medium">Expected Salary:</span> {formData.expectedSalary || 'Not specified'}
+                            <span className="font-medium">Expected Salary:</span> {formData.expectedSalary ? `${formData.expectedSalary} ${formData.salaryCurrency}` : 'Not specified'}
                           </div>
                           <div>
                             <span className="font-medium">Experience:</span> {formData.totalExperienceYears} years
